@@ -9,6 +9,7 @@ Group project for **AD023 Management IT & Information Systems II** (La Salle Cam
 
 - **Customer experience (main view):** board scorecard for the five objectives, repeat rate as the north-star KPI, NPS, satisfaction by restaurant, service time, regulars lost, customer segments, menu engineering, and the insights and decisions table.
 - **Commercial & channels, Operations, Finance, Systems, data & AI:** the supporting KPIs for each area.
+- **Language (top right):** English by default, with a Spanish version (`?lang=es` in the link).
 - **View selector (top left):** all restaurants (consolidated) or any of the eight restaurants. The selection is kept in the link (`?r=R03`), so a view can be shared.
 
 Every KPI names the system it comes from: CoverManager, Last.app, Gstock, Odoo, Factorial, Google Analytics 4 or Google Business Profile.
@@ -25,6 +26,7 @@ They are not real figures of any company. The CSV files are in [`/data`](data) a
 | `index.html` | The page |
 | `assets/dd.js` | Charts and dashboard logic |
 | `assets/dash-shim.js` | Small engine that loads the data and redraws the page |
+| `assets/i18n.js` | English / Spanish switch |
 | `assets/data.js` | The sample data, so the page also works offline |
 | `assets/brand.css`, `assets/site.css`, `assets/fonts/` | Design (Poppins font) |
 | `data/*.csv` | Sample data by source system |
