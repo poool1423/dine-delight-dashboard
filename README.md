@@ -3,7 +3,7 @@
 Interactive management dashboard for **Case 5 – Dine Delight**, a mid-sized restaurant chain with 8 restaurants in Barcelona.
 Group project for **AD023 Management IT & Information Systems II** (La Salle Campus Barcelona), Presentation 3 – Data, Analytics & Management.
 
-**Live page:** see the GitHub Pages link in the repository description.
+**Live page:** https://poool1423.github.io/dine-delight-dashboard/
 
 ## What it shows
 
