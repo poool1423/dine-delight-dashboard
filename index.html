@@ -103,7 +103,7 @@
     <select class="dash-select dd-sel" id="sel-rest" aria-label="Restaurant in view">
         <option value="ALL">All restaurants</option><option value="R01">R01 Eixample</option><option value="R02">R02 Gràcia</option><option value="R03">R03 Diagonal</option><option value="R04">R04 Poblenou</option><option value="R05">R05 Sants</option><option value="R06">R06 Sant Gervasi</option><option value="R07">R07 Born</option><option value="R08">R08 Les Corts</option>
       </select>
-    <span class="dd-period">December · year 1 of the programme</span>
+    <div class="dd-topr"><span class="dd-period">December · year 1 of the programme</span><div class="dd-lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button></div></div>
   </div>
   <header class="dd-head" id="header">
     <h1>Dine Delight · Management dashboard</h1>
@@ -373,6 +373,7 @@
 <script src="assets/data.js"></script>
 <script src="assets/dash-shim.js"></script>
 <script src="assets/dd.js"></script>
-<script>dash.start();</script>
+<script src="assets/i18n.js"></script>
+<script>dash.start(); ddI18n.start();</script>
 </body>
 </html>
