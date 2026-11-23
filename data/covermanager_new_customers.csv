@@ -1,0 +1,406 @@
+restaurant,name,month,m,channel,new_customers
+R01,Eixample,Apr,4,Website,28
+R02,Gracia,Apr,4,Website,20
+R03,Diagonal,Apr,4,Website,25
+R04,Poblenou,Apr,4,Website,21
+R05,Sants,Apr,4,Website,19
+R06,Sant Gervasi,Apr,4,Website,22
+R07,Born,Apr,4,Website,23
+R08,Les Corts,Apr,4,Website,22
+ALL,All restaurants,Apr,4,Website,180
+R01,Eixample,Apr,4,Google Maps,40
+R02,Gracia,Apr,4,Google Maps,24
+R03,Diagonal,Apr,4,Google Maps,15
+R04,Poblenou,Apr,4,Google Maps,25
+R05,Sants,Apr,4,Google Maps,28
+R06,Sant Gervasi,Apr,4,Google Maps,18
+R07,Born,Apr,4,Google Maps,52
+R08,Les Corts,Apr,4,Google Maps,26
+ALL,All restaurants,Apr,4,Google Maps,228
+R01,Eixample,Apr,4,Instagram & TikTok,12
+R02,Gracia,Apr,4,Instagram & TikTok,17
+R03,Diagonal,Apr,4,Instagram & TikTok,11
+R04,Poblenou,Apr,4,Instagram & TikTok,15
+R05,Sants,Apr,4,Instagram & TikTok,10
+R06,Sant Gervasi,Apr,4,Instagram & TikTok,8
+R07,Born,Apr,4,Instagram & TikTok,14
+R08,Les Corts,Apr,4,Instagram & TikTok,12
+ALL,All restaurants,Apr,4,Instagram & TikTok,99
+R01,Eixample,Apr,4,QR at the table,32
+R02,Gracia,Apr,4,QR at the table,28
+R03,Diagonal,Apr,4,QR at the table,29
+R04,Poblenou,Apr,4,QR at the table,28
+R05,Sants,Apr,4,QR at the table,26
+R06,Sant Gervasi,Apr,4,QR at the table,30
+R07,Born,Apr,4,QR at the table,31
+R08,Les Corts,Apr,4,QR at the table,30
+ALL,All restaurants,Apr,4,QR at the table,234
+R01,Eixample,Apr,4,Company events,1
+R02,Gracia,Apr,4,Company events,0
+R03,Diagonal,Apr,4,Company events,1
+R04,Poblenou,Apr,4,Company events,1
+R05,Sants,Apr,4,Company events,1
+R06,Sant Gervasi,Apr,4,Company events,1
+R07,Born,Apr,4,Company events,1
+R08,Les Corts,Apr,4,Company events,2
+ALL,All restaurants,Apr,4,Company events,8
+R01,Eixample,May,5,Website,32
+R02,Gracia,May,5,Website,23
+R03,Diagonal,May,5,Website,28
+R04,Poblenou,May,5,Website,23
+R05,Sants,May,5,Website,22
+R06,Sant Gervasi,May,5,Website,24
+R07,Born,May,5,Website,26
+R08,Les Corts,May,5,Website,24
+ALL,All restaurants,May,5,Website,202
+R01,Eixample,May,5,Google Maps,44
+R02,Gracia,May,5,Google Maps,27
+R03,Diagonal,May,5,Google Maps,17
+R04,Poblenou,May,5,Google Maps,28
+R05,Sants,May,5,Google Maps,31
+R06,Sant Gervasi,May,5,Google Maps,21
+R07,Born,May,5,Google Maps,58
+R08,Les Corts,May,5,Google Maps,29
+ALL,All restaurants,May,5,Google Maps,255
+R01,Eixample,May,5,Instagram & TikTok,14
+R02,Gracia,May,5,Instagram & TikTok,19
+R03,Diagonal,May,5,Instagram & TikTok,12
+R04,Poblenou,May,5,Instagram & TikTok,17
+R05,Sants,May,5,Instagram & TikTok,11
+R06,Sant Gervasi,May,5,Instagram & TikTok,9
+R07,Born,May,5,Instagram & TikTok,16
+R08,Les Corts,May,5,Instagram & TikTok,13
+ALL,All restaurants,May,5,Instagram & TikTok,111
+R01,Eixample,May,5,QR at the table,36
+R02,Gracia,May,5,QR at the table,31
+R03,Diagonal,May,5,QR at the table,32
+R04,Poblenou,May,5,QR at the table,32
+R05,Sants,May,5,QR at the table,30
+R06,Sant Gervasi,May,5,QR at the table,33
+R07,Born,May,5,QR at the table,35
+R08,Les Corts,May,5,QR at the table,33
+ALL,All restaurants,May,5,QR at the table,262
+R01,Eixample,May,5,Company events,1
+R02,Gracia,May,5,Company events,1
+R03,Diagonal,May,5,Company events,1
+R04,Poblenou,May,5,Company events,1
+R05,Sants,May,5,Company events,1
+R06,Sant Gervasi,May,5,Company events,1
+R07,Born,May,5,Company events,1
+R08,Les Corts,May,5,Company events,2
+ALL,All restaurants,May,5,Company events,9
+R01,Eixample,Jun,6,Website,35
+R02,Gracia,Jun,6,Website,25
+R03,Diagonal,Jun,6,Website,31
+R04,Poblenou,Jun,6,Website,26
+R05,Sants,Jun,6,Website,24
+R06,Sant Gervasi,Jun,6,Website,27
+R07,Born,Jun,6,Website,28
+R08,Les Corts,Jun,6,Website,27
+ALL,All restaurants,Jun,6,Website,223
+R01,Eixample,Jun,6,Google Maps,49
+R02,Gracia,Jun,6,Google Maps,30
+R03,Diagonal,Jun,6,Google Maps,19
+R04,Poblenou,Jun,6,Google Maps,31
+R05,Sants,Jun,6,Google Maps,35
+R06,Sant Gervasi,Jun,6,Google Maps,23
+R07,Born,Jun,6,Google Maps,64
+R08,Les Corts,Jun,6,Google Maps,32
+ALL,All restaurants,Jun,6,Google Maps,283
+R01,Eixample,Jun,6,Instagram & TikTok,15
+R02,Gracia,Jun,6,Instagram & TikTok,21
+R03,Diagonal,Jun,6,Instagram & TikTok,14
+R04,Poblenou,Jun,6,Instagram & TikTok,19
+R05,Sants,Jun,6,Instagram & TikTok,12
+R06,Sant Gervasi,Jun,6,Instagram & TikTok,10
+R07,Born,Jun,6,Instagram & TikTok,18
+R08,Les Corts,Jun,6,Instagram & TikTok,14
+ALL,All restaurants,Jun,6,Instagram & TikTok,123
+R01,Eixample,Jun,6,QR at the table,40
+R02,Gracia,Jun,6,QR at the table,34
+R03,Diagonal,Jun,6,QR at the table,36
+R04,Poblenou,Jun,6,QR at the table,35
+R05,Sants,Jun,6,QR at the table,33
+R06,Sant Gervasi,Jun,6,QR at the table,37
+R07,Born,Jun,6,QR at the table,38
+R08,Les Corts,Jun,6,QR at the table,37
+ALL,All restaurants,Jun,6,QR at the table,290
+R01,Eixample,Jun,6,Company events,1
+R02,Gracia,Jun,6,Company events,1
+R03,Diagonal,Jun,6,Company events,1
+R04,Poblenou,Jun,6,Company events,2
+R05,Sants,Jun,6,Company events,1
+R06,Sant Gervasi,Jun,6,Company events,1
+R07,Born,Jun,6,Company events,1
+R08,Les Corts,Jun,6,Company events,2
+ALL,All restaurants,Jun,6,Company events,10
+R01,Eixample,Jul,7,Website,38
+R02,Gracia,Jul,7,Website,28
+R03,Diagonal,Jul,7,Website,34
+R04,Poblenou,Jul,7,Website,28
+R05,Sants,Jul,7,Website,26
+R06,Sant Gervasi,Jul,7,Website,30
+R07,Born,Jul,7,Website,31
+R08,Les Corts,Jul,7,Website,30
+ALL,All restaurants,Jul,7,Website,245
+R01,Eixample,Jul,7,Google Maps,54
+R02,Gracia,Jul,7,Google Maps,33
+R03,Diagonal,Jul,7,Google Maps,21
+R04,Poblenou,Jul,7,Google Maps,34
+R05,Sants,Jul,7,Google Maps,38
+R06,Sant Gervasi,Jul,7,Google Maps,25
+R07,Born,Jul,7,Google Maps,70
+R08,Les Corts,Jul,7,Google Maps,35
+ALL,All restaurants,Jul,7,Google Maps,310
+R01,Eixample,Jul,7,Instagram & TikTok,17
+R02,Gracia,Jul,7,Instagram & TikTok,23
+R03,Diagonal,Jul,7,Instagram & TikTok,15
+R04,Poblenou,Jul,7,Instagram & TikTok,21
+R05,Sants,Jul,7,Instagram & TikTok,14
+R06,Sant Gervasi,Jul,7,Instagram & TikTok,11
+R07,Born,Jul,7,Instagram & TikTok,19
+R08,Les Corts,Jul,7,Instagram & TikTok,15
+ALL,All restaurants,Jul,7,Instagram & TikTok,135
+R01,Eixample,Jul,7,QR at the table,44
+R02,Gracia,Jul,7,QR at the table,38
+R03,Diagonal,Jul,7,QR at the table,39
+R04,Poblenou,Jul,7,QR at the table,38
+R05,Sants,Jul,7,QR at the table,36
+R06,Sant Gervasi,Jul,7,QR at the table,41
+R07,Born,Jul,7,QR at the table,42
+R08,Les Corts,Jul,7,QR at the table,40
+ALL,All restaurants,Jul,7,QR at the table,318
+R01,Eixample,Jul,7,Company events,1
+R02,Gracia,Jul,7,Company events,1
+R03,Diagonal,Jul,7,Company events,1
+R04,Poblenou,Jul,7,Company events,2
+R05,Sants,Jul,7,Company events,1
+R06,Sant Gervasi,Jul,7,Company events,1
+R07,Born,Jul,7,Company events,1
+R08,Les Corts,Jul,7,Company events,3
+ALL,All restaurants,Jul,7,Company events,11
+R01,Eixample,Aug,8,Website,42
+R02,Gracia,Aug,8,Website,30
+R03,Diagonal,Aug,8,Website,37
+R04,Poblenou,Aug,8,Website,30
+R05,Sants,Aug,8,Website,29
+R06,Sant Gervasi,Aug,8,Website,32
+R07,Born,Aug,8,Website,34
+R08,Les Corts,Aug,8,Website,32
+ALL,All restaurants,Aug,8,Website,266
+R01,Eixample,Aug,8,Google Maps,59
+R02,Gracia,Aug,8,Google Maps,36
+R03,Diagonal,Aug,8,Google Maps,22
+R04,Poblenou,Aug,8,Google Maps,37
+R05,Sants,Aug,8,Google Maps,41
+R06,Sant Gervasi,Aug,8,Google Maps,27
+R07,Born,Aug,8,Google Maps,77
+R08,Les Corts,Aug,8,Google Maps,38
+ALL,All restaurants,Aug,8,Google Maps,337
+R01,Eixample,Aug,8,Instagram & TikTok,18
+R02,Gracia,Aug,8,Instagram & TikTok,25
+R03,Diagonal,Aug,8,Instagram & TikTok,16
+R04,Poblenou,Aug,8,Instagram & TikTok,23
+R05,Sants,Aug,8,Instagram & TikTok,15
+R06,Sant Gervasi,Aug,8,Instagram & TikTok,12
+R07,Born,Aug,8,Instagram & TikTok,21
+R08,Les Corts,Aug,8,Instagram & TikTok,17
+ALL,All restaurants,Aug,8,Instagram & TikTok,147
+R01,Eixample,Aug,8,QR at the table,47
+R02,Gracia,Aug,8,QR at the table,41
+R03,Diagonal,Aug,8,QR at the table,43
+R04,Poblenou,Aug,8,QR at the table,42
+R05,Sants,Aug,8,QR at the table,39
+R06,Sant Gervasi,Aug,8,QR at the table,44
+R07,Born,Aug,8,QR at the table,46
+R08,Les Corts,Aug,8,QR at the table,44
+ALL,All restaurants,Aug,8,QR at the table,346
+R01,Eixample,Aug,8,Company events,1
+R02,Gracia,Aug,8,Company events,1
+R03,Diagonal,Aug,8,Company events,2
+R04,Poblenou,Aug,8,Company events,2
+R05,Sants,Aug,8,Company events,1
+R06,Sant Gervasi,Aug,8,Company events,1
+R07,Born,Aug,8,Company events,1
+R08,Les Corts,Aug,8,Company events,3
+ALL,All restaurants,Aug,8,Company events,12
+R01,Eixample,Sep,9,Website,45
+R02,Gracia,Sep,9,Website,32
+R03,Diagonal,Sep,9,Website,41
+R04,Poblenou,Sep,9,Website,33
+R05,Sants,Sep,9,Website,31
+R06,Sant Gervasi,Sep,9,Website,35
+R07,Born,Sep,9,Website,36
+R08,Les Corts,Sep,9,Website,35
+ALL,All restaurants,Sep,9,Website,288
+R01,Eixample,Sep,9,Google Maps,63
+R02,Gracia,Sep,9,Google Maps,39
+R03,Diagonal,Sep,9,Google Maps,24
+R04,Poblenou,Sep,9,Google Maps,40
+R05,Sants,Sep,9,Google Maps,45
+R06,Sant Gervasi,Sep,9,Google Maps,29
+R07,Born,Sep,9,Google Maps,83
+R08,Les Corts,Sep,9,Google Maps,42
+ALL,All restaurants,Sep,9,Google Maps,365
+R01,Eixample,Sep,9,Instagram & TikTok,20
+R02,Gracia,Sep,9,Instagram & TikTok,27
+R03,Diagonal,Sep,9,Instagram & TikTok,17
+R04,Poblenou,Sep,9,Instagram & TikTok,24
+R05,Sants,Sep,9,Instagram & TikTok,16
+R06,Sant Gervasi,Sep,9,Instagram & TikTok,13
+R07,Born,Sep,9,Instagram & TikTok,23
+R08,Les Corts,Sep,9,Instagram & TikTok,18
+ALL,All restaurants,Sep,9,Instagram & TikTok,158
+R01,Eixample,Sep,9,QR at the table,52
+R02,Gracia,Sep,9,QR at the table,44
+R03,Diagonal,Sep,9,QR at the table,46
+R04,Poblenou,Sep,9,QR at the table,45
+R05,Sants,Sep,9,QR at the table,42
+R06,Sant Gervasi,Sep,9,QR at the table,48
+R07,Born,Sep,9,QR at the table,50
+R08,Les Corts,Sep,9,QR at the table,47
+ALL,All restaurants,Sep,9,QR at the table,374
+R01,Eixample,Sep,9,Company events,2
+R02,Gracia,Sep,9,Company events,1
+R03,Diagonal,Sep,9,Company events,2
+R04,Poblenou,Sep,9,Company events,2
+R05,Sants,Sep,9,Company events,1
+R06,Sant Gervasi,Sep,9,Company events,1
+R07,Born,Sep,9,Company events,1
+R08,Les Corts,Sep,9,Company events,3
+ALL,All restaurants,Sep,9,Company events,13
+R01,Eixample,Oct,10,Website,49
+R02,Gracia,Oct,10,Website,35
+R03,Diagonal,Oct,10,Website,44
+R04,Poblenou,Oct,10,Website,36
+R05,Sants,Oct,10,Website,33
+R06,Sant Gervasi,Oct,10,Website,37
+R07,Born,Oct,10,Website,39
+R08,Les Corts,Oct,10,Website,37
+ALL,All restaurants,Oct,10,Website,310
+R01,Eixample,Oct,10,Google Maps,68
+R02,Gracia,Oct,10,Google Maps,42
+R03,Diagonal,Oct,10,Google Maps,26
+R04,Poblenou,Oct,10,Google Maps,43
+R05,Sants,Oct,10,Google Maps,48
+R06,Sant Gervasi,Oct,10,Google Maps,31
+R07,Born,Oct,10,Google Maps,89
+R08,Les Corts,Oct,10,Google Maps,45
+ALL,All restaurants,Oct,10,Google Maps,392
+R01,Eixample,Oct,10,Instagram & TikTok,21
+R02,Gracia,Oct,10,Instagram & TikTok,29
+R03,Diagonal,Oct,10,Instagram & TikTok,19
+R04,Poblenou,Oct,10,Instagram & TikTok,26
+R05,Sants,Oct,10,Instagram & TikTok,17
+R06,Sant Gervasi,Oct,10,Instagram & TikTok,14
+R07,Born,Oct,10,Instagram & TikTok,24
+R08,Les Corts,Oct,10,Instagram & TikTok,20
+ALL,All restaurants,Oct,10,Instagram & TikTok,170
+R01,Eixample,Oct,10,QR at the table,55
+R02,Gracia,Oct,10,QR at the table,48
+R03,Diagonal,Oct,10,QR at the table,50
+R04,Poblenou,Oct,10,QR at the table,49
+R05,Sants,Oct,10,QR at the table,45
+R06,Sant Gervasi,Oct,10,QR at the table,51
+R07,Born,Oct,10,QR at the table,53
+R08,Les Corts,Oct,10,QR at the table,51
+ALL,All restaurants,Oct,10,QR at the table,402
+R01,Eixample,Oct,10,Company events,2
+R02,Gracia,Oct,10,Company events,1
+R03,Diagonal,Oct,10,Company events,2
+R04,Poblenou,Oct,10,Company events,2
+R05,Sants,Oct,10,Company events,1
+R06,Sant Gervasi,Oct,10,Company events,1
+R07,Born,Oct,10,Company events,2
+R08,Les Corts,Oct,10,Company events,3
+ALL,All restaurants,Oct,10,Company events,14
+R01,Eixample,Nov,11,Website,52
+R02,Gracia,Nov,11,Website,37
+R03,Diagonal,Nov,11,Website,47
+R04,Poblenou,Nov,11,Website,38
+R05,Sants,Nov,11,Website,35
+R06,Sant Gervasi,Nov,11,Website,40
+R07,Born,Nov,11,Website,42
+R08,Les Corts,Nov,11,Website,40
+ALL,All restaurants,Nov,11,Website,331
+R01,Eixample,Nov,11,Google Maps,73
+R02,Gracia,Nov,11,Google Maps,45
+R03,Diagonal,Nov,11,Google Maps,28
+R04,Poblenou,Nov,11,Google Maps,46
+R05,Sants,Nov,11,Google Maps,51
+R06,Sant Gervasi,Nov,11,Google Maps,34
+R07,Born,Nov,11,Google Maps,95
+R08,Les Corts,Nov,11,Google Maps,48
+ALL,All restaurants,Nov,11,Google Maps,420
+R01,Eixample,Nov,11,Instagram & TikTok,23
+R02,Gracia,Nov,11,Instagram & TikTok,31
+R03,Diagonal,Nov,11,Instagram & TikTok,20
+R04,Poblenou,Nov,11,Instagram & TikTok,28
+R05,Sants,Nov,11,Instagram & TikTok,18
+R06,Sant Gervasi,Nov,11,Instagram & TikTok,15
+R07,Born,Nov,11,Instagram & TikTok,26
+R08,Les Corts,Nov,11,Instagram & TikTok,21
+ALL,All restaurants,Nov,11,Instagram & TikTok,182
+R01,Eixample,Nov,11,QR at the table,59
+R02,Gracia,Nov,11,QR at the table,51
+R03,Diagonal,Nov,11,QR at the table,53
+R04,Poblenou,Nov,11,QR at the table,52
+R05,Sants,Nov,11,QR at the table,49
+R06,Sant Gervasi,Nov,11,QR at the table,55
+R07,Born,Nov,11,QR at the table,57
+R08,Les Corts,Nov,11,QR at the table,55
+ALL,All restaurants,Nov,11,QR at the table,431
+R01,Eixample,Nov,11,Company events,2
+R02,Gracia,Nov,11,Company events,1
+R03,Diagonal,Nov,11,Company events,2
+R04,Poblenou,Nov,11,Company events,2
+R05,Sants,Nov,11,Company events,1
+R06,Sant Gervasi,Nov,11,Company events,2
+R07,Born,Nov,11,Company events,2
+R08,Les Corts,Nov,11,Company events,3
+ALL,All restaurants,Nov,11,Company events,15
+R01,Eixample,Dec,12,Website,55
+R02,Gracia,Dec,12,Website,40
+R03,Diagonal,Dec,12,Website,50
+R04,Poblenou,Dec,12,Website,40
+R05,Sants,Dec,12,Website,38
+R06,Sant Gervasi,Dec,12,Website,43
+R07,Born,Dec,12,Website,44
+R08,Les Corts,Dec,12,Website,43
+ALL,All restaurants,Dec,12,Website,353
+R01,Eixample,Dec,12,Google Maps,78
+R02,Gracia,Dec,12,Google Maps,48
+R03,Diagonal,Dec,12,Google Maps,30
+R04,Poblenou,Dec,12,Google Maps,49
+R05,Sants,Dec,12,Google Maps,54
+R06,Sant Gervasi,Dec,12,Google Maps,36
+R07,Born,Dec,12,Google Maps,101
+R08,Les Corts,Dec,12,Google Maps,51
+ALL,All restaurants,Dec,12,Google Maps,447
+R01,Eixample,Dec,12,Instagram & TikTok,24
+R02,Gracia,Dec,12,Instagram & TikTok,33
+R03,Diagonal,Dec,12,Instagram & TikTok,22
+R04,Poblenou,Dec,12,Instagram & TikTok,30
+R05,Sants,Dec,12,Instagram & TikTok,20
+R06,Sant Gervasi,Dec,12,Instagram & TikTok,15
+R07,Born,Dec,12,Instagram & TikTok,28
+R08,Les Corts,Dec,12,Instagram & TikTok,22
+ALL,All restaurants,Dec,12,Instagram & TikTok,194
+R01,Eixample,Dec,12,QR at the table,63
+R02,Gracia,Dec,12,QR at the table,55
+R03,Diagonal,Dec,12,QR at the table,57
+R04,Poblenou,Dec,12,QR at the table,55
+R05,Sants,Dec,12,QR at the table,52
+R06,Sant Gervasi,Dec,12,QR at the table,58
+R07,Born,Dec,12,QR at the table,61
+R08,Les Corts,Dec,12,QR at the table,58
+ALL,All restaurants,Dec,12,QR at the table,459
+R01,Eixample,Dec,12,Company events,2
+R02,Gracia,Dec,12,Company events,1
+R03,Diagonal,Dec,12,Company events,2
+R04,Poblenou,Dec,12,Company events,2
+R05,Sants,Dec,12,Company events,1
+R06,Sant Gervasi,Dec,12,Company events,2
+R07,Born,Dec,12,Company events,2
+R08,Les Corts,Dec,12,Company events,4
+ALL,All restaurants,Dec,12,Company events,16

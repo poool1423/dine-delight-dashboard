@@ -1,0 +1,8 @@
+supplier,restaurants,deliveries,otif_pct,incidents
+Fresh produce - F1,All,1150,96.2,18
+Meat - M1,All,610,95.1,14
+Fish & seafood - S1,"R02, R04, R07",420,81.7,52
+Fish & seafood - S2 (backup),"R01, R03, R05, R06, R08",480,97.0,9
+Dry goods - D1,All,240,98.4,3
+Drinks - B1,All,260,99.1,2
+Dairy & bakery - P1,All,690,94.0,21

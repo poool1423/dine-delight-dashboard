@@ -1,0 +1,379 @@
+restaurant,name,day,slot,occupancy_pct
+R01,Eixample,Mon,13-14h,81
+R02,Gracia,Mon,13-14h,74
+R03,Diagonal,Mon,13-14h,87
+R04,Poblenou,Mon,13-14h,84
+R05,Sants,Mon,13-14h,79
+R06,Sant Gervasi,Mon,13-14h,72
+R07,Born,Mon,13-14h,63
+R08,Les Corts,Mon,13-14h,76
+ALL,All restaurants,Mon,13-14h,77
+R01,Eixample,Mon,14-15h,100
+R02,Gracia,Mon,14-15h,94
+R03,Diagonal,Mon,14-15h,100
+R04,Poblenou,Mon,14-15h,100
+R05,Sants,Mon,14-15h,99
+R06,Sant Gervasi,Mon,14-15h,89
+R07,Born,Mon,14-15h,84
+R08,Les Corts,Mon,14-15h,94
+ALL,All restaurants,Mon,14-15h,95
+R01,Eixample,Mon,15-16h,43
+R02,Gracia,Mon,15-16h,39
+R03,Diagonal,Mon,15-16h,49
+R04,Poblenou,Mon,15-16h,45
+R05,Sants,Mon,15-16h,40
+R06,Sant Gervasi,Mon,15-16h,33
+R07,Born,Mon,15-16h,28
+R08,Les Corts,Mon,15-16h,36
+ALL,All restaurants,Mon,15-16h,39
+R01,Eixample,Mon,20-21h,35
+R02,Gracia,Mon,20-21h,29
+R03,Diagonal,Mon,20-21h,26
+R04,Poblenou,Mon,20-21h,31
+R05,Sants,Mon,20-21h,30
+R06,Sant Gervasi,Mon,20-21h,36
+R07,Born,Mon,20-21h,41
+R08,Les Corts,Mon,20-21h,35
+ALL,All restaurants,Mon,20-21h,33
+R01,Eixample,Mon,21-22h,64
+R02,Gracia,Mon,21-22h,56
+R03,Diagonal,Mon,21-22h,52
+R04,Poblenou,Mon,21-22h,57
+R05,Sants,Mon,21-22h,54
+R06,Sant Gervasi,Mon,21-22h,62
+R07,Born,Mon,21-22h,67
+R08,Les Corts,Mon,21-22h,59
+ALL,All restaurants,Mon,21-22h,59
+R01,Eixample,Mon,22-23h,45
+R02,Gracia,Mon,22-23h,39
+R03,Diagonal,Mon,22-23h,35
+R04,Poblenou,Mon,22-23h,41
+R05,Sants,Mon,22-23h,39
+R06,Sant Gervasi,Mon,22-23h,46
+R07,Born,Mon,22-23h,48
+R08,Les Corts,Mon,22-23h,44
+ALL,All restaurants,Mon,22-23h,42
+R01,Eixample,Tue,13-14h,81
+R02,Gracia,Tue,13-14h,72
+R03,Diagonal,Tue,13-14h,88
+R04,Poblenou,Tue,13-14h,84
+R05,Sants,Tue,13-14h,75
+R06,Sant Gervasi,Tue,13-14h,70
+R07,Born,Tue,13-14h,63
+R08,Les Corts,Tue,13-14h,74
+ALL,All restaurants,Tue,13-14h,76
+R01,Eixample,Tue,14-15h,97
+R02,Gracia,Tue,14-15h,92
+R03,Diagonal,Tue,14-15h,100
+R04,Poblenou,Tue,14-15h,100
+R05,Sants,Tue,14-15h,96
+R06,Sant Gervasi,Tue,14-15h,88
+R07,Born,Tue,14-15h,81
+R08,Les Corts,Tue,14-15h,89
+ALL,All restaurants,Tue,14-15h,93
+R01,Eixample,Tue,15-16h,41
+R02,Gracia,Tue,15-16h,35
+R03,Diagonal,Tue,15-16h,48
+R04,Poblenou,Tue,15-16h,44
+R05,Sants,Tue,15-16h,36
+R06,Sant Gervasi,Tue,15-16h,33
+R07,Born,Tue,15-16h,25
+R08,Les Corts,Tue,15-16h,35
+ALL,All restaurants,Tue,15-16h,37
+R01,Eixample,Tue,20-21h,41
+R02,Gracia,Tue,20-21h,36
+R03,Diagonal,Tue,20-21h,29
+R04,Poblenou,Tue,20-21h,37
+R05,Sants,Tue,20-21h,35
+R06,Sant Gervasi,Tue,20-21h,39
+R07,Born,Tue,20-21h,42
+R08,Les Corts,Tue,20-21h,37
+ALL,All restaurants,Tue,20-21h,37
+R01,Eixample,Tue,21-22h,63
+R02,Gracia,Tue,21-22h,58
+R03,Diagonal,Tue,21-22h,52
+R04,Poblenou,Tue,21-22h,56
+R05,Sants,Tue,21-22h,57
+R06,Sant Gervasi,Tue,21-22h,60
+R07,Born,Tue,21-22h,67
+R08,Les Corts,Tue,21-22h,59
+ALL,All restaurants,Tue,21-22h,59
+R01,Eixample,Tue,22-23h,47
+R02,Gracia,Tue,22-23h,43
+R03,Diagonal,Tue,22-23h,35
+R04,Poblenou,Tue,22-23h,41
+R05,Sants,Tue,22-23h,41
+R06,Sant Gervasi,Tue,22-23h,48
+R07,Born,Tue,22-23h,52
+R08,Les Corts,Tue,22-23h,45
+ALL,All restaurants,Tue,22-23h,44
+R01,Eixample,Wed,13-14h,85
+R02,Gracia,Wed,13-14h,77
+R03,Diagonal,Wed,13-14h,92
+R04,Poblenou,Wed,13-14h,84
+R05,Sants,Wed,13-14h,79
+R06,Sant Gervasi,Wed,13-14h,74
+R07,Born,Wed,13-14h,65
+R08,Les Corts,Wed,13-14h,77
+ALL,All restaurants,Wed,13-14h,79
+R01,Eixample,Wed,14-15h,95
+R02,Gracia,Wed,14-15h,89
+R03,Diagonal,Wed,14-15h,100
+R04,Poblenou,Wed,14-15h,98
+R05,Sants,Wed,14-15h,91
+R06,Sant Gervasi,Wed,14-15h,85
+R07,Born,Wed,14-15h,79
+R08,Les Corts,Wed,14-15h,90
+ALL,All restaurants,Wed,14-15h,91
+R01,Eixample,Wed,15-16h,42
+R02,Gracia,Wed,15-16h,38
+R03,Diagonal,Wed,15-16h,52
+R04,Poblenou,Wed,15-16h,46
+R05,Sants,Wed,15-16h,40
+R06,Sant Gervasi,Wed,15-16h,33
+R07,Born,Wed,15-16h,26
+R08,Les Corts,Wed,15-16h,36
+ALL,All restaurants,Wed,15-16h,39
+R01,Eixample,Wed,20-21h,38
+R02,Gracia,Wed,20-21h,30
+R03,Diagonal,Wed,20-21h,28
+R04,Poblenou,Wed,20-21h,33
+R05,Sants,Wed,20-21h,30
+R06,Sant Gervasi,Wed,20-21h,38
+R07,Born,Wed,20-21h,41
+R08,Les Corts,Wed,20-21h,35
+ALL,All restaurants,Wed,20-21h,34
+R01,Eixample,Wed,21-22h,64
+R02,Gracia,Wed,21-22h,56
+R03,Diagonal,Wed,21-22h,53
+R04,Poblenou,Wed,21-22h,58
+R05,Sants,Wed,21-22h,58
+R06,Sant Gervasi,Wed,21-22h,64
+R07,Born,Wed,21-22h,66
+R08,Les Corts,Wed,21-22h,60
+ALL,All restaurants,Wed,21-22h,60
+R01,Eixample,Wed,22-23h,42
+R02,Gracia,Wed,22-23h,38
+R03,Diagonal,Wed,22-23h,34
+R04,Poblenou,Wed,22-23h,40
+R05,Sants,Wed,22-23h,37
+R06,Sant Gervasi,Wed,22-23h,42
+R07,Born,Wed,22-23h,46
+R08,Les Corts,Wed,22-23h,41
+ALL,All restaurants,Wed,22-23h,40
+R01,Eixample,Thu,13-14h,86
+R02,Gracia,Thu,13-14h,77
+R03,Diagonal,Thu,13-14h,92
+R04,Poblenou,Thu,13-14h,85
+R05,Sants,Thu,13-14h,80
+R06,Sant Gervasi,Thu,13-14h,74
+R07,Born,Thu,13-14h,68
+R08,Les Corts,Thu,13-14h,77
+ALL,All restaurants,Thu,13-14h,80
+R01,Eixample,Thu,14-15h,93
+R02,Gracia,Thu,14-15h,88
+R03,Diagonal,Thu,14-15h,99
+R04,Poblenou,Thu,14-15h,97
+R05,Sants,Thu,14-15h,89
+R06,Sant Gervasi,Thu,14-15h,85
+R07,Born,Thu,14-15h,76
+R08,Les Corts,Thu,14-15h,85
+ALL,All restaurants,Thu,14-15h,89
+R01,Eixample,Thu,15-16h,42
+R02,Gracia,Thu,15-16h,36
+R03,Diagonal,Thu,15-16h,49
+R04,Poblenou,Thu,15-16h,45
+R05,Sants,Thu,15-16h,39
+R06,Sant Gervasi,Thu,15-16h,32
+R07,Born,Thu,15-16h,24
+R08,Les Corts,Thu,15-16h,36
+ALL,All restaurants,Thu,15-16h,38
+R01,Eixample,Thu,20-21h,56
+R02,Gracia,Thu,20-21h,61
+R03,Diagonal,Thu,20-21h,46
+R04,Poblenou,Thu,20-21h,51
+R05,Sants,Thu,20-21h,50
+R06,Sant Gervasi,Thu,20-21h,54
+R07,Born,Thu,20-21h,60
+R08,Les Corts,Thu,20-21h,54
+ALL,All restaurants,Thu,20-21h,54
+R01,Eixample,Thu,21-22h,94
+R02,Gracia,Thu,21-22h,96
+R03,Diagonal,Thu,21-22h,80
+R04,Poblenou,Thu,21-22h,89
+R05,Sants,Thu,21-22h,84
+R06,Sant Gervasi,Thu,21-22h,93
+R07,Born,Thu,21-22h,97
+R08,Les Corts,Thu,21-22h,88
+ALL,All restaurants,Thu,21-22h,90
+R01,Eixample,Thu,22-23h,76
+R02,Gracia,Thu,22-23h,83
+R03,Diagonal,Thu,22-23h,65
+R04,Poblenou,Thu,22-23h,70
+R05,Sants,Thu,22-23h,71
+R06,Sant Gervasi,Thu,22-23h,75
+R07,Born,Thu,22-23h,81
+R08,Les Corts,Thu,22-23h,72
+ALL,All restaurants,Thu,22-23h,74
+R01,Eixample,Fri,13-14h,81
+R02,Gracia,Fri,13-14h,76
+R03,Diagonal,Fri,13-14h,86
+R04,Poblenou,Fri,13-14h,83
+R05,Sants,Fri,13-14h,79
+R06,Sant Gervasi,Fri,13-14h,74
+R07,Born,Fri,13-14h,66
+R08,Les Corts,Fri,13-14h,72
+ALL,All restaurants,Fri,13-14h,77
+R01,Eixample,Fri,14-15h,100
+R02,Gracia,Fri,14-15h,95
+R03,Diagonal,Fri,14-15h,100
+R04,Poblenou,Fri,14-15h,100
+R05,Sants,Fri,14-15h,96
+R06,Sant Gervasi,Fri,14-15h,89
+R07,Born,Fri,14-15h,81
+R08,Les Corts,Fri,14-15h,91
+ALL,All restaurants,Fri,14-15h,94
+R01,Eixample,Fri,15-16h,42
+R02,Gracia,Fri,15-16h,36
+R03,Diagonal,Fri,15-16h,49
+R04,Poblenou,Fri,15-16h,44
+R05,Sants,Fri,15-16h,38
+R06,Sant Gervasi,Fri,15-16h,32
+R07,Born,Fri,15-16h,26
+R08,Les Corts,Fri,15-16h,37
+ALL,All restaurants,Fri,15-16h,38
+R01,Eixample,Fri,20-21h,58
+R02,Gracia,Fri,20-21h,60
+R03,Diagonal,Fri,20-21h,44
+R04,Poblenou,Fri,20-21h,53
+R05,Sants,Fri,20-21h,49
+R06,Sant Gervasi,Fri,20-21h,56
+R07,Born,Fri,20-21h,67
+R08,Les Corts,Fri,20-21h,53
+ALL,All restaurants,Fri,20-21h,55
+R01,Eixample,Fri,21-22h,90
+R02,Gracia,Fri,21-22h,94
+R03,Diagonal,Fri,21-22h,79
+R04,Poblenou,Fri,21-22h,83
+R05,Sants,Fri,21-22h,83
+R06,Sant Gervasi,Fri,21-22h,90
+R07,Born,Fri,21-22h,99
+R08,Les Corts,Fri,21-22h,86
+ALL,All restaurants,Fri,21-22h,88
+R01,Eixample,Fri,22-23h,78
+R02,Gracia,Fri,22-23h,82
+R03,Diagonal,Fri,22-23h,65
+R04,Poblenou,Fri,22-23h,71
+R05,Sants,Fri,22-23h,71
+R06,Sant Gervasi,Fri,22-23h,75
+R07,Born,Fri,22-23h,90
+R08,Les Corts,Fri,22-23h,76
+ALL,All restaurants,Fri,22-23h,76
+R01,Eixample,Sat,13-14h,74
+R02,Gracia,Sat,13-14h,69
+R03,Diagonal,Sat,13-14h,49
+R04,Poblenou,Sat,13-14h,60
+R05,Sants,Sat,13-14h,71
+R06,Sant Gervasi,Sat,13-14h,80
+R07,Born,Sat,13-14h,78
+R08,Les Corts,Sat,13-14h,79
+ALL,All restaurants,Sat,13-14h,70
+R01,Eixample,Sat,14-15h,89
+R02,Gracia,Sat,14-15h,86
+R03,Diagonal,Sat,14-15h,66
+R04,Poblenou,Sat,14-15h,78
+R05,Sants,Sat,14-15h,88
+R06,Sant Gervasi,Sat,14-15h,97
+R07,Born,Sat,14-15h,95
+R08,Les Corts,Sat,14-15h,97
+ALL,All restaurants,Sat,14-15h,87
+R01,Eixample,Sat,15-16h,64
+R02,Gracia,Sat,15-16h,58
+R03,Diagonal,Sat,15-16h,39
+R04,Poblenou,Sat,15-16h,50
+R05,Sants,Sat,15-16h,61
+R06,Sant Gervasi,Sat,15-16h,68
+R07,Born,Sat,15-16h,65
+R08,Les Corts,Sat,15-16h,68
+ALL,All restaurants,Sat,15-16h,59
+R01,Eixample,Sat,20-21h,55
+R02,Gracia,Sat,20-21h,61
+R03,Diagonal,Sat,20-21h,38
+R04,Poblenou,Sat,20-21h,44
+R05,Sants,Sat,20-21h,48
+R06,Sant Gervasi,Sat,20-21h,57
+R07,Born,Sat,20-21h,68
+R08,Les Corts,Sat,20-21h,61
+ALL,All restaurants,Sat,20-21h,54
+R01,Eixample,Sat,21-22h,88
+R02,Gracia,Sat,21-22h,93
+R03,Diagonal,Sat,21-22h,69
+R04,Poblenou,Sat,21-22h,74
+R05,Sants,Sat,21-22h,83
+R06,Sant Gervasi,Sat,21-22h,87
+R07,Born,Sat,21-22h,100
+R08,Les Corts,Sat,21-22h,94
+ALL,All restaurants,Sat,21-22h,86
+R01,Eixample,Sat,22-23h,81
+R02,Gracia,Sat,22-23h,82
+R03,Diagonal,Sat,22-23h,60
+R04,Poblenou,Sat,22-23h,67
+R05,Sants,Sat,22-23h,71
+R06,Sant Gervasi,Sat,22-23h,77
+R07,Born,Sat,22-23h,88
+R08,Les Corts,Sat,22-23h,83
+ALL,All restaurants,Sat,22-23h,76
+R01,Eixample,Sun,13-14h,76
+R02,Gracia,Sun,13-14h,69
+R03,Diagonal,Sun,13-14h,51
+R04,Poblenou,Sun,13-14h,66
+R05,Sants,Sun,13-14h,74
+R06,Sant Gervasi,Sun,13-14h,84
+R07,Born,Sun,13-14h,82
+R08,Les Corts,Sun,13-14h,82
+ALL,All restaurants,Sun,13-14h,73
+R01,Eixample,Sun,14-15h,97
+R02,Gracia,Sun,14-15h,90
+R03,Diagonal,Sun,14-15h,71
+R04,Poblenou,Sun,14-15h,81
+R05,Sants,Sun,14-15h,93
+R06,Sant Gervasi,Sun,14-15h,100
+R07,Born,Sun,14-15h,96
+R08,Les Corts,Sun,14-15h,100
+ALL,All restaurants,Sun,14-15h,91
+R01,Eixample,Sun,15-16h,67
+R02,Gracia,Sun,15-16h,62
+R03,Diagonal,Sun,15-16h,42
+R04,Poblenou,Sun,15-16h,55
+R05,Sants,Sun,15-16h,66
+R06,Sant Gervasi,Sun,15-16h,74
+R07,Born,Sun,15-16h,73
+R08,Les Corts,Sun,15-16h,73
+ALL,All restaurants,Sun,15-16h,64
+R01,Eixample,Sun,20-21h,55
+R02,Gracia,Sun,20-21h,49
+R03,Diagonal,Sun,20-21h,35
+R04,Poblenou,Sun,20-21h,41
+R05,Sants,Sun,20-21h,48
+R06,Sant Gervasi,Sun,20-21h,54
+R07,Born,Sun,20-21h,57
+R08,Les Corts,Sun,20-21h,61
+ALL,All restaurants,Sun,20-21h,50
+R01,Eixample,Sun,21-22h,69
+R02,Gracia,Sun,21-22h,61
+R03,Diagonal,Sun,21-22h,49
+R04,Poblenou,Sun,21-22h,55
+R05,Sants,Sun,21-22h,61
+R06,Sant Gervasi,Sun,21-22h,69
+R07,Born,Sun,21-22h,72
+R08,Les Corts,Sun,21-22h,76
+ALL,All restaurants,Sun,21-22h,64
+R01,Eixample,Sun,22-23h,35
+R02,Gracia,Sun,22-23h,27
+R03,Diagonal,Sun,22-23h,17
+R04,Poblenou,Sun,22-23h,23
+R05,Sants,Sun,22-23h,26
+R06,Sant Gervasi,Sun,22-23h,35
+R07,Born,Sun,22-23h,37
+R08,Les Corts,Sun,22-23h,39
+ALL,All restaurants,Sun,22-23h,30

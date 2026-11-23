@@ -1,0 +1,127 @@
+restaurant,name,dish,units_per_month,margin_eur,class
+R01,Eixample,Seafood paella,642,12.8,Star
+R01,Eixample,Grilled chicken,593,9.5,Star
+R01,Eixample,Lunch set menu,1433,6.5,Plowhorse
+R01,Eixample,Beef burger,476,7.1,Plowhorse
+R01,Eixample,Hake a la romana,314,10.8,Star
+R01,Eixample,Galician octopus,214,13.7,Puzzle
+R01,Eixample,Black rice,343,11.8,Star
+R01,Eixample,Slow-roast lamb,109,8.6,Dog
+R01,Eixample,Mushroom risotto,262,10.2,Puzzle
+R01,Eixample,Caesar salad,394,8.6,Plowhorse
+R01,Eixample,Fideua,171,7.0,Dog
+R01,Eixample,Baked sea bass,243,11.8,Puzzle
+R01,Eixample,Chickpea stew,130,5.6,Dog
+R01,Eixample,Entrecote,262,14.3,Puzzle
+R02,Gracia,Seafood paella,362,13.3,Star
+R02,Gracia,Grilled chicken,511,9.7,Star
+R02,Gracia,Lunch set menu,1029,6.2,Plowhorse
+R02,Gracia,Beef burger,615,6.9,Plowhorse
+R02,Gracia,Hake a la romana,230,10.7,Star
+R02,Gracia,Galician octopus,157,13.9,Puzzle
+R02,Gracia,Black rice,251,11.7,Star
+R02,Gracia,Slow-roast lamb,94,8.8,Dog
+R02,Gracia,Mushroom risotto,226,10.5,Star
+R02,Gracia,Caesar salad,339,8.8,Plowhorse
+R02,Gracia,Fideua,126,6.9,Dog
+R02,Gracia,Baked sea bass,178,11.8,Puzzle
+R02,Gracia,Chickpea stew,112,5.7,Dog
+R02,Gracia,Entrecote,226,14.5,Star
+R03,Diagonal,Seafood paella,266,12.9,Puzzle
+R03,Diagonal,Grilled chicken,531,9.4,Star
+R03,Diagonal,Lunch set menu,2354,6.1,Plowhorse
+R03,Diagonal,Beef burger,426,7.0,Plowhorse
+R03,Diagonal,Hake a la romana,282,10.7,Puzzle
+R03,Diagonal,Galician octopus,192,13.7,Puzzle
+R03,Diagonal,Black rice,308,11.8,Star
+R03,Diagonal,Slow-roast lamb,49,8.9,Puzzle
+R03,Diagonal,Mushroom risotto,235,10.7,Puzzle
+R03,Diagonal,Caesar salad,494,8.4,Plowhorse
+R03,Diagonal,Fideua,154,7.0,Dog
+R03,Diagonal,Baked sea bass,218,12.2,Puzzle
+R03,Diagonal,Chickpea stew,151,5.9,Dog
+R03,Diagonal,Entrecote,164,14.6,Puzzle
+R04,Poblenou,Seafood paella,367,13.2,Star
+R04,Poblenou,Grilled chicken,519,9.5,Star
+R04,Poblenou,Lunch set menu,1568,6.2,Plowhorse
+R04,Poblenou,Beef burger,542,7.3,Plowhorse
+R04,Poblenou,Hake a la romana,234,11.1,Puzzle
+R04,Poblenou,Galician octopus,160,14.0,Puzzle
+R04,Poblenou,Black rice,255,11.8,Star
+R04,Poblenou,Slow-roast lamb,96,8.7,Dog
+R04,Poblenou,Mushroom risotto,229,10.6,Puzzle
+R04,Poblenou,Caesar salad,448,8.8,Plowhorse
+R04,Poblenou,Fideua,128,7.1,Dog
+R04,Poblenou,Baked sea bass,181,12.1,Puzzle
+R04,Poblenou,Chickpea stew,114,6.0,Dog
+R04,Poblenou,Entrecote,229,14.7,Puzzle
+R05,Sants,Seafood paella,404,13.0,Star
+R05,Sants,Grilled chicken,485,9.7,Star
+R05,Sants,Lunch set menu,978,6.3,Plowhorse
+R05,Sants,Beef burger,390,7.3,Plowhorse
+R05,Sants,Hake a la romana,258,11.0,Star
+R05,Sants,Galician octopus,176,13.5,Puzzle
+R05,Sants,Black rice,281,11.6,Star
+R05,Sants,Slow-roast lamb,89,8.7,Dog
+R05,Sants,Mushroom risotto,214,10.6,Star
+R05,Sants,Caesar salad,322,8.4,Plowhorse
+R05,Sants,Fideua,140,6.8,Dog
+R05,Sants,Baked sea bass,199,12.0,Puzzle
+R05,Sants,Chickpea stew,128,6.0,Dog
+R05,Sants,Entrecote,215,14.6,Star
+R06,Sant Gervasi,Seafood paella,455,13.2,Star
+R06,Sant Gervasi,Grilled chicken,546,9.8,Star
+R06,Sant Gervasi,Lunch set menu,880,6.1,Plowhorse
+R06,Sant Gervasi,Beef burger,438,7.1,Plowhorse
+R06,Sant Gervasi,Hake a la romana,290,11.2,Star
+R06,Sant Gervasi,Galician octopus,198,13.8,Puzzle
+R06,Sant Gervasi,Black rice,316,11.7,Star
+R06,Sant Gervasi,Slow-roast lamb,121,8.6,Dog
+R06,Sant Gervasi,Mushroom risotto,241,10.4,Star
+R06,Sant Gervasi,Caesar salad,362,8.7,Plowhorse
+R06,Sant Gervasi,Fideua,158,6.7,Dog
+R06,Sant Gervasi,Baked sea bass,224,12.2,Puzzle
+R06,Sant Gervasi,Chickpea stew,120,5.7,Dog
+R06,Sant Gervasi,Entrecote,338,14.7,Star
+R07,Born,Seafood paella,950,10.4,Star
+R07,Born,Grilled chicken,570,9.7,Star
+R07,Born,Lunch set menu,460,6.1,Plowhorse
+R07,Born,Beef burger,275,7.2,Plowhorse
+R07,Born,Hake a la romana,303,10.7,Star
+R07,Born,Galician octopus,206,13.9,Puzzle
+R07,Born,Black rice,330,10.6,Star
+R07,Born,Slow-roast lamb,242,6.1,Plowhorse
+R07,Born,Mushroom risotto,252,10.6,Star
+R07,Born,Caesar salad,379,8.6,Plowhorse
+R07,Born,Fideua,165,6.8,Dog
+R07,Born,Baked sea bass,234,11.9,Puzzle
+R07,Born,Chickpea stew,125,5.8,Dog
+R07,Born,Entrecote,252,14.4,Star
+R08,Les Corts,Seafood paella,454,13.0,Star
+R08,Les Corts,Grilled chicken,545,9.5,Star
+R08,Les Corts,Lunch set menu,1098,6.2,Plowhorse
+R08,Les Corts,Beef burger,438,7.1,Plowhorse
+R08,Les Corts,Hake a la romana,289,11.0,Star
+R08,Les Corts,Galician octopus,197,14.0,Puzzle
+R08,Les Corts,Black rice,316,11.8,Star
+R08,Les Corts,Slow-roast lamb,100,8.7,Dog
+R08,Les Corts,Mushroom risotto,241,10.5,Puzzle
+R08,Les Corts,Caesar salad,362,8.5,Plowhorse
+R08,Les Corts,Fideua,158,7.0,Dog
+R08,Les Corts,Baked sea bass,223,12.1,Puzzle
+R08,Les Corts,Chickpea stew,120,5.7,Dog
+R08,Les Corts,Entrecote,314,14.3,Star
+ALL,All restaurants,Seafood paella,3900,12.4,Star
+ALL,All restaurants,Grilled chicken,4300,9.6,Star
+ALL,All restaurants,Lunch set menu,9800,6.2,Plowhorse
+ALL,All restaurants,Beef burger,3600,7.1,Plowhorse
+ALL,All restaurants,Hake a la romana,2200,10.9,Star
+ALL,All restaurants,Galician octopus,1500,13.8,Puzzle
+ALL,All restaurants,Black rice,2400,11.6,Star
+ALL,All restaurants,Slow-roast lamb,900,8.0,Dog
+ALL,All restaurants,Mushroom risotto,1900,10.5,Puzzle
+ALL,All restaurants,Caesar salad,3100,8.6,Plowhorse
+ALL,All restaurants,Fideua,1200,6.9,Dog
+ALL,All restaurants,Baked sea bass,1700,12.0,Puzzle
+ALL,All restaurants,Chickpea stew,1000,5.8,Dog
+ALL,All restaurants,Entrecote,2000,14.5,Star

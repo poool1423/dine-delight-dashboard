@@ -1,0 +1,13 @@
+month,m,pos_uptime_pct,card_data_tokenised_pct,mfa_users_pct,security_incidents,sync_success_pct,open_sync_errors
+Jan,1,97.2,0,,0,,
+Feb,2,96.6,0,,1,,
+Mar,3,97.4,0,,0,,
+Apr,4,99.4,100,40,0,,
+May,5,99.5,100,52,0,,
+Jun,6,99.5,100,64,0,,
+Jul,7,99.5,100,76,0,98.6,9
+Aug,8,99.6,100,88,0,98.8,7
+Sep,9,99.7,100,100,0,99.0,6
+Oct,10,99.7,100,100,0,99.3,4
+Nov,11,99.8,100,100,0,99.5,3
+Dec,12,99.8,100,100,0,99.7,1

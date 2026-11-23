@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dine Delight · Management dashboard</title>
+<meta name="description" content="Management dashboard for Dine Delight (AD023 case study, simulated data).">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%2322C1DC'/%3E%3Cstop offset='1' stop-color='%231C84E1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='30' fill='url(%23g)'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='24' font-weight='700' fill='white' text-anchor='middle'%3EDD%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div id="dash-root">
+<style>
+.dd{display:grid;gap:var(--cds-gap-lg);font-family:var(--font-anthropic-sans);color:var(--color-fg)}
+.dd h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0;line-height:1.15}
+.dd h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:0}
+.dd h3{font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium);margin:0;line-height:1.35}
+.dd p{margin:0}
+.dd-lead{font-size:var(--cds-font-size-body);max-width:70ch}
+.dd-muted,.dd-src,.dd-dec{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
+.dd-src b,.dd-dec b{font-weight:var(--cds-font-weight-medium);color:var(--color-fg)}
+.dd-tabs{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs);border-bottom:1px solid var(--color-border-line);padding-bottom:var(--cds-pad-xs)}
+.dd-tabbtn{font:inherit;font-size:var(--cds-font-size-body);min-height:44px;padding:0 var(--cds-pad-md);border:1px solid transparent;border-radius:var(--cds-radius);background:transparent;color:var(--color-fg-muted);cursor:pointer}
+.dd-tabbtn[aria-selected="true"]{background:var(--color-panel);border-color:var(--color-border-line);color:var(--color-fg)}
+.dd-tabbtn:focus-visible,.dd-sel:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.dd-tab{display:grid;gap:var(--cds-gap-lg)}
+.dd [hidden]{display:none !important}
+.dd-intro{display:grid;gap:var(--cds-gap-xs)}
+.dd-grid{display:grid;gap:var(--cds-gap-md);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.dd-grid.k{grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr))}
+.dd-grid.two{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.dd-card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg);display:grid;gap:var(--cds-gap-sm);align-content:start}
+.dd-kpi .dd-lbl{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.dd-kpi .dd-val{font-family:var(--font-anthropic-serif);font-size:32px;line-height:1.1;font-variant-numeric:tabular-nums}
+.dd-obj{font-size:var(--cds-font-size-caption);font-weight:var(--cds-font-weight-medium)}
+.dd-star{border-width:2px}
+.dd-star .dd-val{font-size:52px}
+.dd-badge{display:inline-block;font-size:var(--cds-font-size-caption);padding:2px 8px;border-radius:999px;border:1px solid currentColor}
+.dd-badge.ok{color:var(--color-ok)}.dd-badge.warn{color:var(--color-warn)}.dd-badge.bad{color:var(--color-bad)}
+.dd-fig{position:relative;min-height:260px}
+.dd-fig.s{min-height:210px}.dd-fig.t{min-height:300px}
+.dd-fig svg{display:block}
+.dd-axis{fill:var(--cds-text-secondary);font-size:11px}
+.dd-plabel{fill:var(--color-fg);font-size:11px}
+.dd-corner{fill:var(--cds-text-secondary);font-size:11px;font-style:italic}
+.dd-tip{position:absolute;z-index:3;pointer-events:none;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:var(--cds-radius);padding:6px 9px;font-size:var(--cds-font-size-caption);white-space:nowrap}
+.dd-tip-h{font-weight:var(--cds-font-weight-medium)}
+.dd-empty{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);padding:var(--cds-pad-md) 0}
+.dd-bars{display:grid;gap:6px}
+.dd-bar{display:grid;grid-template-columns:minmax(0,11.5em) minmax(0,1fr) 5.2em;align-items:center;gap:8px;font-size:var(--cds-font-size-caption)}
+.dd-bar-l{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dd-bar-t{position:relative;height:14px;background:color-mix(in srgb,var(--color-border-line) 45%,transparent);border-radius:3px}
+.dd-bar-b{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+.dd-bar-tg{position:absolute;top:-3px;bottom:-3px;width:0;border-left:2px dashed var(--cds-chart-status-critical)}
+.dd-bar-v{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dd-bar-n{grid-column:2/4;color:var(--color-fg-muted);margin-top:-3px}
+.dd-scroll{overflow-x:auto}
+.dd-heat{border-collapse:separate;border-spacing:3px;font-size:var(--cds-font-size-caption);font-variant-numeric:tabular-nums;width:100%}
+.dd-heat th{font-weight:var(--cds-font-weight-medium);text-align:left;white-space:nowrap;padding:4px 6px}
+.dd-heat thead th{text-align:center}
+.dd-heat td{text-align:center;padding:7px 6px;border-radius:4px;min-width:3.2em}
+.dd-legend{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:var(--cds-font-size-caption)}
+.dd-legend-row{display:flex;flex-wrap:wrap;gap:4px 14px;min-height:26px}
+.dd-legend li{display:flex;align-items:center;gap:6px}
+.dd-sw{width:12px;height:12px;border-radius:2px;flex:none}
+.dd-sw-dash{height:3px}
+.dd-donut{display:flex;flex-wrap:wrap;align-items:center;gap:var(--cds-gap-md)}
+.dd-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--cds-gap-sm);justify-content:space-between}
+.dd-sel{min-height:40px}
+.dd-tbl{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption)}
+.dd-tbl th,.dd-tbl td{text-align:left;vertical-align:top;padding:8px 8px;border-bottom:1px solid var(--color-border-line)}
+.dd-tbl th{font-weight:var(--cds-font-weight-medium);white-space:nowrap}
+.dd-tbl td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dd-tbl b{font-weight:var(--cds-font-weight-medium)}
+.dd-note{border-left:3px solid var(--cds-chart-reference);padding-left:var(--cds-pad-sm)}
+.dd-view{display:flex;flex-wrap:wrap;gap:var(--cds-gap-md);align-items:flex-start;background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md) var(--cds-pad-lg)}
+.dd-view-ctl{display:flex;align-items:center;gap:var(--cds-gap-sm)}
+.dd-view-ctl label{font-weight:var(--cds-font-weight-medium)}
+.dd-view-txt{display:grid;gap:4px;flex:1 1 280px;font-size:var(--cds-font-size-caption)}
+.dd-view-txt b{font-weight:var(--cds-font-weight-medium)}
+.dd-tag{justify-self:start;display:inline-block;font-size:var(--cds-font-size-caption);padding:1px 8px;border-radius:999px;border:1px dashed var(--color-fg-muted);color:var(--color-fg-muted)}
+.dd-bars.has-hl .dd-bar:not(.dd-hl){opacity:.45}
+.dd-bar.dd-hl .dd-bar-l,.dd-bar.dd-hl .dd-bar-v{font-weight:var(--cds-font-weight-medium)}
+.dd-heat.has-hl tbody tr:not(.dd-hl){opacity:.45}
+.dd-heat tr.dd-hl th{font-weight:var(--cds-font-weight-medium);text-decoration:underline}
+@media (max-width:600px){.dd-star .dd-val{font-size:40px}.dd-bar{grid-template-columns:minmax(0,7em) minmax(0,1fr) 4.6em}.dd-dec-tbl thead{display:none}.dd-dec-tbl tr{display:grid;padding:8px 0;border-bottom:1px solid var(--color-border-line)}.dd-dec-tbl td{border:0;padding:3px 0}}
+@media print{.dd-tabs,.dd-sel{display:none}.dd-tab{break-before:page}}
+</style>
+<link rel="stylesheet" href="assets/brand.css">
+
+<div class="dd" id="top">
+<div class="dd-app">
+  <nav class="dd-side" aria-label="Dashboard areas">
+    <div class="dd-logo" aria-hidden="true">DD</div>
+    <button class="dd-tabbtn" data-tab="customer" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/><circle cx="12" cy="8" r="4"/></svg><span>Customer</span></button>
+    <button class="dd-tabbtn" data-tab="commercial" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg><span>Commercial</span></button>
+    <button class="dd-tabbtn" data-tab="operations" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2"/></svg><span>Operations</span></button>
+    <button class="dd-tabbtn" data-tab="finance" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h6v6"/></svg><span>Finance</span></button>
+    <button class="dd-tabbtn" data-tab="systems" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span>Systems &amp; AI</span></button>
+  </nav>
+  <div class="dd-main">
+  <div class="dd-topbar" id="view">
+    <select class="dash-select dd-sel" id="sel-rest" aria-label="Restaurant in view">
+        <option value="ALL">All restaurants</option><option value="R01">R01 Eixample</option><option value="R02">R02 Gràcia</option><option value="R03">R03 Diagonal</option><option value="R04">R04 Poblenou</option><option value="R05">R05 Sants</option><option value="R06">R06 Sant Gervasi</option><option value="R07">R07 Born</option><option value="R08">R08 Les Corts</option>
+      </select>
+    <span class="dd-period">December · year 1 of the programme</span>
+  </div>
+  <header class="dd-head" id="header">
+    <h1>Dine Delight · Management dashboard</h1>
+    <p class="dd-lead">Across the chain, in December, <b data-draw="val" data-source="cm" data-field="repeat_rate_pct" data-where="month=Dec&amp;restaurant=ALL" data-fmt="pct">—</b> of identified guests came back within 90 days, <span data-draw="word" data-s="cm" data-f="repeat_rate_pct" data-w="month=Dec&amp;restaurant=ALL" data-target="40" data-good="high">—</span> the 40% target. The weak point is R03 Diagonal: its repeat rate is <b data-draw="val" data-source="cm" data-field="repeat_rate_pct" data-where="month=Dec&amp;restaurant=R03" data-fmt="pct">—</b> and its service is the slowest of the chain (<b data-draw="val" data-source="lastapp" data-field="service_time_min" data-where="month=Dec&amp;restaurant=R03" data-fmt="min">—</b> from order to dish ready).</p>
+    <p class="dd-prof" data-prof="R01" hidden><b>R01 Eixample</b> · city centre, office and tourist trade · the largest restaurant by sales.</p>
+    <p class="dd-prof" data-prof="R02" hidden><b>R02 Gràcia</b> · neighbourhood trade, young adults and groups · served by fish supplier S1.</p>
+    <p class="dd-prof" data-prof="R03" hidden><b>R03 Diagonal</b> · office district, weekday lunch is the core trade · the slowest kitchen of the chain.</p>
+    <p class="dd-prof" data-prof="R04" hidden><b>R04 Poblenou</b> · 22@ offices and young adults · served by fish supplier S1.</p>
+    <p class="dd-prof" data-prof="R05" hidden><b>R05 Sants</b> · next to the station, families and commuters · the highest stock variance.</p>
+    <p class="dd-prof" data-prof="R06" hidden><b>R06 Sant Gervasi</b> · residential, families · the highest margin of the chain.</p>
+    <p class="dd-prof" data-prof="R07" hidden><b>R07 Born</b> · old town, tourists and dinner trade · the best NPS and the lowest margin · served by fish supplier S1.</p>
+    <p class="dd-prof" data-prof="R08" hidden><b>R08 Les Corts</b> · residential and company events · the most large-group bookings.</p>
+    <p class="dd-muted">Simulated data for the AD023 project · Year 1 of the programme, January to December · Phase 1 (Last.app, CoverManager) went live in April, Phase 2 (Gstock, Odoo, Factorial) in July and Phase 3 (data warehouse and BI) in October. KPIs that could not be measured before their system went live start at that month.</p>
+  </header>
+
+  <!-- CUSTOMER EXPERIENCE -->
+  <section class="dd-tab" id="customer">
+    <div class="dd-intro">
+      <h2>Board scorecard · Q1 Are we meeting our strategic objectives?</h2>
+      <p class="dd-muted"><b data-draw="rest-name">—</b> · December values against the year-one targets. The customer is the driver of the business; the other four objectives protect growth and margin.</p>
+    </div>
+    <div class="dd-grid k" id="scorecard">
+      <div class="dd-card dd-kpi" id="o1"><div class="dd-kh"><span class="dd-lbl">O1 · Repeat rate, 90 days</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_cm" data-field="repeat_rate_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≥ 40%" data-s="v_cm" data-f="repeat_rate_pct" data-w="month=Dec" data-target="40" data-good="high"></span></div>
+      <div class="dd-card dd-kpi" id="o2"><div class="dd-kh"><span class="dd-lbl">O2 · Sales vs budget</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="vs_budget_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≥ 100%" data-s="v_odoo" data-f="vs_budget_pct" data-w="month=Dec" data-target="100" data-good="high" data-tol="2"></span></div>
+      <div class="dd-card dd-kpi" id="o3"><div class="dd-kh"><span class="dd-lbl">O3 · Food cost</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="food_cost_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≤ 30%" data-s="v_odoo" data-f="food_cost_pct" data-w="month=Dec" data-target="30" data-good="low" data-tol="1"></span><span class="dd-muted">Sector 28–35%</span></div>
+      <div class="dd-card dd-kpi" id="o4"><div class="dd-kh"><span class="dd-lbl">O4 · Order to dish ready</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_lastapp" data-field="service_time_min" data-where="month=Dec" data-fmt="min">—</span><span data-draw="st" data-tl="Target ≤ 15 min" data-s="v_lastapp" data-f="service_time_min" data-w="month=Dec" data-target="15" data-good="low" data-tol="1"></span></div>
+      <div class="dd-card dd-kpi" id="o5"><div class="dd-kh"><span class="dd-lbl">O5 · EBITDA margin</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="ebitda_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≥ 12%" data-s="v_odoo" data-f="ebitda_pct" data-w="month=Dec" data-target="12" data-good="high" data-tol="1.5"></span></div>
+    </div>
+
+    <div class="dd-grid two">
+      <div class="dd-card dd-kpi dd-star" id="north-star">
+        <span class="dd-obj">North-star KPI · Q2 Are our guests coming back?</span>
+        <span class="dd-lbl">Identified guests who returned within 90 days, December</span>
+        <span class="dd-val" data-draw="val" data-source="v_cm" data-field="repeat_rate_pct" data-where="month=Dec" data-fmt="pct">—</span>
+        <span class="dd-muted">First measured in July (90 days after CoverManager went live): <span data-draw="val" data-source="v_cm" data-field="repeat_rate_pct" data-where="month=Jul" data-fmt="pct">—</span>. Target ≥ 40%.</span>
+        <p class="dd-src"><b>Source:</b> CoverManager (visits per Customer ID, fed by Last.app tickets). Only identified guests count: walk-ins without a booking, QR scan or loyalty card are not included.</p>
+      </div>
+      <div class="dd-card" id="repeat-card">
+        <div class="dd-row"><h3>Repeat rate by month</h3><p class="dd-muted">Consolidated: the chain against its lowest restaurant. A restaurant: that restaurant against the chain.</p></div>
+        <div class="dd-fig" data-draw="repeat-trend" data-source="cm"></div>
+        <p class="dd-dec"><b>Decision it supports:</b> where to focus loyalty campaigns and which restaurant needs a recovery plan.</p>
+      </div>
+    </div>
+
+    <div class="dd-intro"><h2>Satisfaction · what our guests feel</h2></div>
+    <div class="dd-grid k" id="sat-kpis">
+      <div class="dd-card dd-kpi" id="k-nps"><div class="dd-kh"><span class="dd-lbl">Net Promoter Score</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_cm" data-field="nps" data-where="month=Dec">—</span><span data-draw="st" data-tl="Target ≥ 50" data-s="v_cm" data-f="nps" data-w="month=Dec" data-target="50" data-good="high" data-tol="3"></span><span class="dd-muted">First survey in May: <span data-draw="val" data-source="v_cm" data-field="nps" data-where="month=May">—</span></span></div>
+      <div class="dd-card dd-kpi" id="k-churn"><div class="dd-kh"><span class="dd-lbl">Regulars lost (no visit in 60 days)</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_cm" data-field="churn_regulars_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≤ 20%" data-s="v_cm" data-f="churn_regulars_pct" data-w="month=Dec" data-target="20" data-good="low" data-tol="1.5"></span><span class="dd-muted">First measured Sep: <span data-draw="val" data-source="v_cm" data-field="churn_regulars_pct" data-where="month=Sep" data-fmt="pct">—</span></span></div>
+      <div class="dd-card dd-kpi" id="k-google"><div class="dd-kh"><span class="dd-lbl">Google rating, average</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_gbp" data-field="google_rating" data-where="month=Dec">—</span><span data-draw="st" data-tl="Target ≥ 4.5" data-s="v_gbp" data-f="google_rating" data-w="month=Dec" data-target="4.5" data-good="high" data-tol="0.2"></span><span class="dd-muted">January, before the project: <span data-draw="val" data-source="v_gbp" data-field="google_rating" data-where="month=Jan">—</span></span></div>
+      <div class="dd-card dd-kpi" id="k-complaints"><div class="dd-kh"><span class="dd-lbl">Complaints resolved within 48 h</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_cm" data-field="complaints_resolved_48h_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≥ 90%" data-s="v_cm" data-f="complaints_resolved_48h_pct" data-w="month=Dec" data-target="90" data-good="high" data-tol="5"></span><span class="dd-muted"><span data-draw="val" data-source="v_cm" data-field="complaints_per_1000" data-where="month=Dec">—</span> complaints per 1,000 guests</span></div>
+    </div>
+
+    <div class="dd-grid two">
+      <div class="dd-card" id="csat-card">
+        <h3>Q2 · Where does the experience fail? Satisfaction (1–5) by restaurant and dimension, Q4</h3>
+        <div class="dd-fig s" data-draw="csat-heat" data-source="cm_csat"></div>
+        <p class="dd-src"><b>Source:</b> CoverManager post-visit survey. Read it by rows: R03 fails on speed, R02 and R04 on food (the restaurants served by fish supplier S1).</p>
+      </div>
+      <div class="dd-card" id="nps-card">
+        <div class="dd-row"><h3>NPS by month</h3></div>
+        <div class="dd-fig" data-draw="nps-trend" data-source="cm"></div>
+        <p class="dd-src"><b>Source:</b> CoverManager surveys, from May. Consolidated: the chain against its lowest restaurant. Survey response rate is tracked in Systems, data &amp; AI.</p>
+      </div>
+    </div>
+
+    <div class="dd-intro"><h2>Experience drivers · why guests come back or leave</h2>
+      <p class="dd-muted">Experience → satisfaction → repeat visits → sales. The operational drivers below explain the satisfaction scores above.</p></div>
+    <div class="dd-grid two">
+      <div class="dd-card" id="svc-card">
+        <h3>Q10 · Order to dish ready, December (minutes)</h3>
+        <div class="dd-fig s" data-draw="svc-bars" data-source="lastapp"></div>
+        <p class="dd-src"><b>Source:</b> Last.app kitchen display (time from order sent to dish marked ready). Dashed line: 15-minute target.</p>
+      </div>
+      <div class="dd-card" id="svc-nps-card">
+        <h3>Slower restaurants have lower NPS (December)</h3>
+        <div class="dd-fig" data-draw="svc-nps" data-source="lastapp cm"></div>
+        <p class="dd-note dd-muted">This shows a relationship, not a cause. R03's speed score, its survey comments and its lunch ticket times are what confirm that slow service is the problem (see Insights &amp; decisions).</p>
+      </div>
+      <div class="dd-card" id="churn-card">
+        <h3>Regulars lost by restaurant, December</h3>
+        <div class="dd-fig s" data-draw="churn-bars" data-source="cm"></div>
+        <p class="dd-src"><b>Source:</b> CoverManager. Regulars = 3 or more visits in 6 months; tourists are excluded. Dashed line: 20% limit.</p>
+      </div>
+      <div class="dd-card" id="seg-card">
+        <h3>Q3 · Which customers are most valuable? Estimated customer lifetime value by segment</h3>
+        <div class="dd-fig s" data-draw="segments" data-source="cm_segments"></div>
+        <p class="dd-src"><b>Source:</b> CoverManager (customers, visits) and Last.app (spend). Estimate: spend × visits per year × expected years as a customer. Less than one year of history, so read it as a ranking, not an exact value.</p>
+      </div>
+    </div>
+
+    <div class="dd-card" id="menu-card">
+      <h3>Q7 · Which dishes do we keep, reprice, redesign or remove? Menu engineering, Q4</h3>
+      <div class="dd-fig t" style="min-height:380px" data-draw="menu" data-source="menu"></div>
+      <p class="dd-src"><b>Source:</b> Last.app (units sold, price) and Gstock (recipe cost). Lines: 70% of average popularity and average margin of the restaurant in view. Horizontal axis on a square-root scale so the less popular dishes do not overlap. Stars: keep · Plowhorses: reprice or cut portion cost · Puzzles: promote · Dogs: redesign or remove.</p>
+    </div>
+
+    <div class="dd-card" id="decisions">
+      <h2>Insights &amp; decisions</h2>
+      <p class="dd-muted">Observation → insight → investigation → decision → owner → follow-up, as each KPI moves out of target.</p>
+      <p class="dd-note dd-muted" id="dec-none" hidden>No open decision is specific to this restaurant; the chain-wide decisions below still apply.</p>
+      <div class="dd-scroll">
+      <table class="dd-tbl dd-dec-tbl">
+        <thead><tr><th>Observation</th><th>Evidence</th><th>Decision</th><th>Owner · deadline</th><th>Follow-up KPI</th></tr></thead>
+        <tbody>
+          <tr id="d-r03" data-rest="R03"><td><b>R03 Diagonal is losing regulars.</b> Office workers have a fixed lunch break; slow service pushes them elsewhere.</td><td>Service <span data-draw="val" data-source="lastapp" data-field="service_time_min" data-where="month=Dec&amp;restaurant=R03" data-fmt="min">—</span> · speed score <span data-draw="val" data-source="cm_csat" data-field="speed" data-where="restaurant=R03">—</span>/5 · regulars lost <span data-draw="val" data-source="cm" data-field="churn_regulars_pct" data-where="month=Dec&amp;restaurant=R03" data-fmt="pct">—</span></td><td>One extra cook from 13:00 to 15:00; prepare the lunch set menu before service; send the recovery offer to regulars at risk.</td><td>Operations manager · 4 weeks</td><td>Service time ≤ 15 min, speed score, regulars lost</td></tr>
+          <tr id="d-fish" data-rest="R02 R04 R07"><td><b>Fish supplier S1 is unreliable.</b> Its three restaurants run out of dishes and score lower on food.</td><td>S1 on-time and complete <span data-draw="val" data-source="gstock_suppliers" data-field="otif_pct" data-where="supplier=Fish %26 seafood - S1" data-fmt="pct">—</span> · R02 dishes out of stock <span data-draw="val" data-source="lastapp" data-field="dishes_86_per_week" data-where="month=Dec&amp;restaurant=R02">—</span>/week · R02 food score <span data-draw="val" data-source="cm_csat" data-field="food" data-where="restaurant=R02">—</span>/5</td><td>Move half of the fish volume to backup supplier S2; formal warning to S1 with a 95% target.</td><td>Purchasing · 2 weeks</td><td>Supplier OTIF, dishes out of stock, food score</td></tr>
+          <tr id="d-r07" data-rest="R07"><td><b>R07 Born has the happiest guests but the lowest margin.</b> Generous portions drive both.</td><td>NPS <span data-draw="val" data-source="cm" data-field="nps" data-where="month=Dec&amp;restaurant=R07">—</span> · food cost <span data-draw="val" data-source="odoo" data-field="food_cost_pct" data-where="month=Dec&amp;restaurant=R07" data-fmt="pct">—</span> · EBITDA <span data-draw="val" data-source="odoo" data-field="ebitda_pct" data-where="month=Dec&amp;restaurant=R07" data-fmt="pct">—</span></td><td>Re-portion the lamb and the paella to the standard recipe and retrain the kitchen; keep NPS as a guardrail.</td><td>Head chef and operations · 6 weeks</td><td>Food cost ≤ 30% with NPS ≥ 55</td></tr>
+          <tr id="d-r05" data-rest="R05"><td><b>R05 Sants uses far more stock than its sales explain.</b> Waste, portions, counting errors or theft.</td><td>Consumption variance <span data-draw="val" data-source="gstock" data-field="consumption_variance_pct" data-where="month=Dec&amp;restaurant=R05" data-fmt="pct">—</span> vs chain <span data-draw="val" data-source="gstock" data-field="consumption_variance_pct" data-where="month=Dec&amp;restaurant=ALL" data-fmt="pct">—</span></td><td>Investigate before concluding: recount stock, check recipes and the waste log, then act.</td><td>Operations and data analyst · 2 weeks</td><td>Consumption variance ≤ 2%</td></tr>
+          <tr id="d-noshow" data-rest="ALL"><td><b>Groups of 9–12 do not pay a deposit and miss many bookings.</b> Groups of 13+ pay one and rarely do.</td><td>No-shows 9–12: <span data-draw="val" data-source="cm_noshows" data-field="no_show_pct" data-where="restaurant=ALL&amp;group_size=9-12" data-fmt="pct">—</span> · 13+: <span data-draw="val" data-source="cm_noshows" data-field="no_show_pct" data-where="restaurant=ALL&amp;group_size=13+" data-fmt="pct">—</span></td><td>Lower the deposit threshold from 13 to 9 guests in CoverManager.</td><td>Marketing and events · 1 week</td><td>No-show rate ≤ 5%</td></tr>
+          <tr id="d-cash" data-rest="ALL"><td><b>Cash falls below the minimum in week 9.</b> Quarterly VAT and supplier payments coincide.</td><td>Week 9 balance €<span data-draw="val" data-source="odoo_cash" data-field="balance_k" data-where="week=W9">—</span>k vs €250k minimum</td><td>Move part of the supplier payment run to week 11; keep the credit line available.</td><td>Finance · before week 7</td><td>Cash forecast above minimum</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMERCIAL -->
+  <section class="dd-tab" id="commercial" hidden>
+    <div class="dd-intro"><h2>Commercial &amp; channels · Q6 Which channels work best and what do they cost?</h2>
+      <p class="dd-muted"><b data-draw="rest-name">—</b> · December values. Sales are taken from Odoo (official figure); day-to-day sales, covers and channels from Last.app. Both match because the Last.app daily closing feeds Odoo.</p></div>
+    <div class="dd-grid k">
+      <div class="dd-card dd-kpi" id="c-rev"><div class="dd-kh"><span class="dd-lbl">Sales</span><span class="dd-per">December</span></div><span class="dd-val">€<span data-draw="val" data-source="v_odoo" data-field="revenue_k" data-where="month=Dec">—</span>k</span><span class="dd-muted">Budget €<span data-draw="val" data-source="v_odoo" data-field="budget_k" data-where="month=Dec">—</span>k</span></div>
+      <div class="dd-card dd-kpi" id="c-ticket"><div class="dd-kh"><span class="dd-lbl">Average ticket</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_lastapp" data-field="avg_ticket" data-where="month=Dec" data-fmt="eur">—</span><span class="dd-muted">Target €23–25</span></div>
+      <div class="dd-card dd-kpi" id="c-own"><div class="dd-kh"><span class="dd-lbl">Own web share of delivery &amp; takeaway</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_lastapp" data-field="own_channel_share_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target 20% in year one" data-s="v_lastapp" data-f="own_channel_share_pct" data-w="month=Dec" data-target="20" data-good="high" data-tol="2"></span><span class="dd-muted">0% before April</span></div>
+      <div class="dd-card dd-kpi" id="c-comm"><div class="dd-kh"><span class="dd-lbl">Platform commissions as a share of sales</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="commissions_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">January: <span data-draw="val" data-source="v_odoo" data-field="commissions_pct" data-where="month=Jan" data-fmt="pct">—</span> · December: €<span data-draw="val" data-source="v_odoo" data-field="commissions_k" data-where="month=Dec">—</span>k</span></div>
+      <div class="dd-card dd-kpi" id="c-conv"><span class="dd-tag" hidden>Chain-wide</span><div class="dd-kh"><span class="dd-lbl">Website conversion</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="ga4" data-field="conversion_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">Visits that end in a booking or order</span></div>
+    </div>
+    <div class="dd-grid two">
+      <div class="dd-card" id="rev-card"><h3>Sales vs budget by month (€k)</h3><div class="dd-fig" data-draw="rev-budget" data-source="odoo"></div><p class="dd-src"><b>Source:</b> Odoo ERP (Jan–Jun from the previous accounting system).</p></div>
+      <div class="dd-card" id="mix-card"><h3>Sales by channel, December</h3><div class="dd-fig s" data-draw="channel-donut" data-source="lastapp"></div><p class="dd-src"><b>Source:</b> Last.app (channel of each ticket). Few categories, so a donut reads well.</p></div>
+      <div class="dd-card" id="own-card"><h3>Own web share of delivery &amp; takeaway (%)</h3><div class="dd-fig s" data-draw="own-share" data-source="lastapp"></div><p class="dd-dec"><b>Decision it supports:</b> how much to invest in promoting our own channel instead of paying ~30% to platforms.</p></div>
+      <div class="dd-card" id="comm-card"><h3>Platform commissions as a share of sales (%)</h3><div class="dd-fig s" data-draw="commissions" data-source="odoo"></div><p class="dd-src"><b>Source:</b> Odoo (Glovo and Uber Eats settlements).</p></div>
+      <div class="dd-card" id="covers-card"><h3>Covers by month</h3><div class="dd-fig s" data-draw="covers" data-source="lastapp"></div><p class="dd-src"><b>Source:</b> Last.app, from April. Sales = covers × average ticket: this split shows whether a drop comes from fewer guests or lower spend.</p></div>
+      <div class="dd-card" id="conv-card"><span class="dd-tag" hidden>Chain-wide</span><h3>Website conversion (%)</h3><div class="dd-fig s" data-draw="conv-trend" data-source="ga4"></div><p class="dd-src"><b>Source:</b> Google Analytics 4 (visits) with CoverManager bookings and Last.app web orders. The old website had no booking or ordering, so there is no earlier value.</p></div>
+      <div class="dd-card" id="newcust-card"><h3>New customers by channel, December</h3><div class="dd-fig s" data-draw="newcust" data-source="cm_newcust"></div><p class="dd-src"><b>Source:</b> CoverManager (first visit and origin of each Customer ID). Replaces CAC: advertising spend is not tracked yet.</p></div>
+      <div class="dd-card" id="noshow-card"><h3>No-shows by group size, April–December</h3><div class="dd-fig s" data-draw="noshow" data-source="cm_noshows"></div><p class="dd-src"><b>Source:</b> CoverManager. Tests our design assumption: a deposit from 13 guests. Dashed line: 5% limit.</p></div>
+    </div>
+  </section>
+
+  <!-- OPERATIONS -->
+  <section class="dd-tab" id="operations" hidden>
+    <div class="dd-intro"><h2>Operations · Q8 Q9 Q10 Q11 Are we wasting food, are suppliers reliable and do we have the right staff?</h2>
+      <p class="dd-muted"><b data-draw="rest-name">—</b> · December values. Stock data starts in July, when Gstock went live: before that, inventory was counted by hand and the waste could not be measured.</p></div>
+    <div class="dd-grid k">
+      <div class="dd-card dd-kpi" id="p-fc"><div class="dd-kh"><span class="dd-lbl">Food cost</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="food_cost_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">Target ≤ 30% · January <span data-draw="val" data-source="v_odoo" data-field="food_cost_pct" data-where="month=Jan" data-fmt="pct">—</span></span></div>
+      <div class="dd-card dd-kpi" id="p-var"><div class="dd-kh"><span class="dd-lbl">Consumption variance</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_gstock" data-field="consumption_variance_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≤ 2%" data-s="v_gstock" data-f="consumption_variance_pct" data-w="month=Dec" data-target="2" data-good="low" data-tol="0.5"></span><span class="dd-muted">July <span data-draw="val" data-source="v_gstock" data-field="consumption_variance_pct" data-where="month=Jul" data-fmt="pct">—</span></span></div>
+      <div class="dd-card dd-kpi" id="p-stock"><div class="dd-kh"><span class="dd-lbl">Days of stock</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_gstock" data-field="days_of_stock" data-where="month=Dec" data-fmt="days">—</span><span class="dd-muted">Target 4–7 days (fresh product)</span></div>
+      <div class="dd-card dd-kpi" id="p-86"><div class="dd-kh"><span class="dd-lbl">Dishes out of stock per week</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_lastapp" data-field="dishes_86_per_week" data-where="month=Dec">—</span><span class="dd-muted">April, before Gstock: <span data-draw="val" data-source="v_lastapp" data-field="dishes_86_per_week" data-where="month=Apr">—</span></span></div>
+      <div class="dd-card dd-kpi" id="p-lab"><div class="dd-kh"><span class="dd-lbl">Labour cost</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="labour_cost_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≤ 30%" data-s="v_odoo" data-f="labour_cost_pct" data-w="month=Dec" data-target="30" data-good="low" data-tol="1"></span><span class="dd-muted">Sector 25–30%</span></div>
+    </div>
+    <div class="dd-grid two">
+      <div class="dd-card" id="fc-trend-card"><h3>Food cost by month (%)</h3><div class="dd-fig s" data-draw="fc-trend" data-source="odoo"></div><p class="dd-src"><b>Source:</b> Odoo (purchases from Gstock ± month-end stock valuation) over Last.app food sales.</p></div>
+      <div class="dd-card" id="fc-bars-card"><h3>Food cost by restaurant, December (%)</h3><div class="dd-fig s" data-draw="fc-bars" data-source="odoo"></div><p class="dd-dec"><b>Decision it supports:</b> change the price or the recipe of the dishes that push it up (see the menu matrix).</p></div>
+      <div class="dd-card" id="var-card"><h3>Consumption variance by month (%)</h3><div class="dd-fig s" data-draw="var-trend" data-source="gstock"></div><p class="dd-src"><b>Source:</b> Gstock. Theoretical use (Last.app sales × recipe) vs actual use (stock counts). Consolidated: the chain against its highest restaurant.</p></div>
+      <div class="dd-card" id="var-bars-card"><h3>Consumption variance by restaurant, December (%)</h3><div class="dd-fig s" data-draw="var-bars" data-source="gstock"></div><p class="dd-src"><b>Source:</b> Gstock. Dashed line: 2% limit.</p></div>
+      <div class="dd-card" id="otif-card"><h3>Q9 · Supplier deliveries on time and complete, Q4 (%)</h3><div class="dd-fig s" data-draw="otif" data-source="gstock_suppliers"></div><p class="dd-src"><b>Source:</b> Gstock (order lines vs receptions, by Supplier ID). With a restaurant in view, only the suppliers that deliver to it. Dashed line: 95% target.</p></div>
+      <div class="dd-card" id="d86-card"><h3>Dishes out of stock per week, December</h3><div class="dd-fig s" data-draw="d86" data-source="lastapp"></div><p class="dd-src"><b>Source:</b> Last.app (dish deactivated during service) with Gstock stock. Dashed line: limit of 3 a week.</p></div>
+      <div class="dd-card" id="occ-card"><h3>Q10 · When are we full? Occupancy by day and time, Q4 (%)</h3><div class="dd-fig s" data-draw="occ-heat" data-source="occupancy"></div><p class="dd-src"><b>Source:</b> Last.app covers and CoverManager bookings over seats. Peaks: weekday lunch and weekend dinner.</p></div>
+      <div class="dd-card" id="lab-card"><h3>Q11 · Labour cost by restaurant, December (%)</h3><div class="dd-fig s" data-draw="labour-bars" data-source="odoo factorial"></div><p class="dd-src"><b>Source:</b> Odoo (payroll) and Factorial (hours). Note: sales per hour worked.</p></div>
+    </div>
+  </section>
+
+  <!-- FINANCE -->
+  <section class="dd-tab" id="finance" hidden>
+    <div class="dd-intro"><h2>Finance · Q4 Q5 Q12 Which restaurants are profitable, is the investment paying back and will we have enough cash?</h2>
+      <p class="dd-muted"><b data-draw="rest-name">—</b> · December values from Odoo, with profit and loss by Restaurant ID.</p></div>
+    <div class="dd-grid k">
+      <div class="dd-card dd-kpi" id="f-ebitda"><div class="dd-kh"><span class="dd-lbl">EBITDA margin</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="ebitda_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">Target ≥ 12% · January <span data-draw="val" data-source="v_odoo" data-field="ebitda_pct" data-where="month=Jan" data-fmt="pct">—</span></span></div>
+      <div class="dd-card dd-kpi" id="f-prime"><div class="dd-kh"><span class="dd-lbl">Prime cost (food + labour)</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="prime_cost_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≤ 60%" data-s="v_odoo" data-f="prime_cost_pct" data-w="month=Dec" data-target="60" data-good="low" data-tol="2"></span><span class="dd-muted">Alert above 65%</span></div>
+      <div class="dd-card dd-kpi" id="f-cash"><span class="dd-tag" hidden>Chain-wide</span><div class="dd-kh"><span class="dd-lbl">Lowest cash balance</span><span class="dd-per">Next 13 weeks</span></div><span class="dd-val">€<span data-draw="val" data-source="odoo_cash" data-field="balance_k" data-where="week=W9">—</span>k</span><span class="dd-muted">Week 9 · minimum €250k</span></div>
+      <div class="dd-card dd-kpi" id="f-net"><span class="dd-tag" hidden>Chain-wide</span><div class="dd-kh"><span class="dd-lbl">Programme net result to date, €k</span><span class="dd-per">Year 1</span></div><span class="dd-val" data-draw="val" data-source="odoo_roi" data-field="net_cum_k" data-where="month=Dec Y1">—</span><span class="dd-muted">Investment €<span data-draw="val" data-source="odoo_roi" data-field="investment_cum_k" data-where="month=Dec Y1">—</span>k · payback forecast: <b data-draw="payback" data-source="odoo_roi" data-field="month">—</b></span></div>
+    </div>
+    <div class="dd-grid two">
+      <div class="dd-card" id="ebitda-card"><h3>EBITDA margin by restaurant, December (%)</h3><div class="dd-fig s" data-draw="ebitda-bars" data-source="odoo"></div><p class="dd-dec"><b>Decision it supports:</b> which restaurant needs an improvement plan (R07 for food cost, R03 for sales).</p></div>
+      <div class="dd-card" id="prime-card"><h3>Prime cost and its parts by month (%)</h3><div class="dd-fig" data-draw="prime-trend" data-source="odoo"></div><p class="dd-src"><b>Source:</b> Odoo. Food and labour are the two costs management can control.</p></div>
+      <div class="dd-card" id="cash-card"><span class="dd-tag" hidden>Chain-wide</span><h3>Q12 · Cash balance forecast, next 13 weeks (€k)</h3><div class="dd-fig s" data-draw="cash" data-source="odoo_cash"></div><p class="dd-src"><b>Source:</b> Odoo (bank balance, payables, receivables, platform settlements). Dashed line: €250k minimum.</p></div>
+      <div class="dd-card" id="roi-card"><span class="dd-tag" hidden>Chain-wide</span><h3>Q5 · Is the investment paying back? Programme net result, cumulative (€k)</h3><div class="dd-fig" data-draw="roi" data-source="odoo_roi"></div><p class="dd-src"><b>Source:</b> Odoo project account (investment and running costs) and measured benefits: commissions saved, lower food cost and extra margin from repeat guests. Benefits ramp up after each phase, so payback comes later than at full speed.</p></div>
+    </div>
+  </section>
+
+  <!-- SYSTEMS, DATA & AI -->
+  <section class="dd-tab" id="systems" hidden>
+    <div class="dd-intro"><h2>Systems, data &amp; AI · Q13 Can we trust the data? Q14 Are customer and payment data safe?</h2>
+      <p class="dd-muted"><b data-draw="rest-name">—</b> · December values. These indicators tell management how much to rely on the rest of the dashboard.</p></div>
+    <div class="dd-grid k">
+      <div class="dd-card dd-kpi" id="s-ident"><div class="dd-kh"><span class="dd-lbl">Tickets with an identified customer</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_lastapp" data-field="identified_tickets_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≥ 50%" data-s="v_lastapp" data-f="identified_tickets_pct" data-w="month=Dec" data-target="50" data-good="high" data-tol="5"></span></div>
+      <div class="dd-card dd-kpi" id="s-resp"><div class="dd-kh"><span class="dd-lbl">Survey response rate</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_cm" data-field="survey_response_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≥ 15%" data-s="v_cm" data-f="survey_response_pct" data-w="month=Dec" data-target="15" data-good="high" data-tol="2"></span></div>
+      <div class="dd-card dd-kpi" id="s-sync"><span class="dd-tag" hidden>Chain-wide</span><div class="dd-kh"><span class="dd-lbl">Integrations without error</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="systems" data-field="sync_success_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">Open errors: <span data-draw="val" data-source="systems" data-field="open_sync_errors" data-where="month=Dec">—</span></span></div>
+      <div class="dd-card dd-kpi" id="s-pos"><span class="dd-tag" hidden>Chain-wide</span><div class="dd-kh"><span class="dd-lbl">POS availability</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="systems" data-field="pos_uptime_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">Target ≥ 99.5% · old POS in February <span data-draw="val" data-source="systems" data-field="pos_uptime_pct" data-where="month=Feb" data-fmt="pct">—</span></span></div>
+      <div class="dd-card dd-kpi" id="s-mfa"><span class="dd-tag" hidden>Chain-wide</span><div class="dd-kh"><span class="dd-lbl">Users with two-factor login</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="systems" data-field="mfa_users_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">Card data tokenised: <span data-draw="val" data-source="systems" data-field="card_data_tokenised_pct" data-where="month=Dec" data-fmt="pct">—</span> · incidents: <span data-draw="val" data-source="systems" data-field="security_incidents" data-where="month=Dec">—</span></span></div>
+    </div>
+    <div class="dd-grid two">
+      <div class="dd-card" id="uptime-card"><span class="dd-tag" hidden>Chain-wide</span><h3>POS availability by month (%)</h3><div class="dd-fig s" data-draw="uptime" data-source="systems"></div><p class="dd-src"><b>Source:</b> incident log of the old POS (Jan–Mar) and Last.app status (from April). Case challenge 1: frequent crashes.</p></div>
+      <div class="dd-card" id="dq-card"><h3>Data quality: identified tickets and survey responses (%)</h3><div class="dd-fig s" data-draw="dq-trend" data-source="lastapp cm"></div><p class="dd-src"><b>Source:</b> Last.app and CoverManager. If these fall, customer KPIs become less reliable.</p></div>
+    </div>
+    <div class="dd-intro"><h2>AI-supported analytics</h2>
+      <p class="dd-muted">Recommendations, not decisions: a manager approves each one. Pilots run inside the data warehouse; they need more history to be fully reliable.</p></div>
+    <div class="dd-grid k">
+      <div class="dd-card dd-kpi" id="a-risk"><div class="dd-kh"><span class="dd-lbl">Regulars at risk of leaving (predictive)</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_ai_churn" data-field="at_risk" data-row="0">—</span><span class="dd-muted">of <span data-draw="val" data-source="v_ai_churn" data-field="regulars" data-row="0">—</span> regulars · <span data-draw="val" data-source="v_ai_churn" data-field="at_risk_pct" data-row="0" data-fmt="pct">—</span></span></div>
+      <div class="dd-card dd-kpi" id="a-fc"><div class="dd-kh"><span class="dd-lbl">Covers expected next week (predictive)</span><span class="dd-per">Next week</span></div><span class="dd-val" data-draw="val" data-source="v_forecast" data-field="forecast_covers" data-where="week=W1">—</span><span class="dd-muted">Range <span data-draw="val" data-source="v_forecast" data-field="low" data-where="week=W1">—</span>–<span data-draw="val" data-source="v_forecast" data-field="high" data-where="week=W1">—</span></span></div>
+    </div>
+    <div class="dd-grid two">
+      <div class="dd-card" id="risk-card"><h3>Regulars at risk of leaving by restaurant (%)</h3><div class="dd-fig s" data-draw="churn-ai" data-source="ai_churn"></div><p class="dd-src"><b>Source:</b> churn model on CoverManager visits and surveys (pilot). Feeds the recovery campaigns; measured against a control group that gets no offer.</p></div>
+      <div class="dd-card" id="sent-card"><h3>What negative comments talk about, Q4 (% of negative mentions)</h3><div class="dd-fig s" data-draw="sent-heat" data-source="ai_sentiment"></div><p class="dd-src"><b>Source:</b> sentiment analysis of CoverManager survey comments and Google reviews. An analyst checks a sample every month.</p></div>
+      <div class="dd-card" id="fcst-card"><h3>Demand forecast, next 8 weeks (covers)</h3><div class="dd-fig" data-draw="forecast" data-source="ai_forecast"></div><p class="dd-src"><b>Source:</b> forecast model on Last.app and CoverManager history, calendar and weather. Feeds Gstock order proposals and shift plans in Factorial.</p></div>
+      <div class="dd-card" id="anom-card"><h3>Anomaly alerts</h3>
+        <div class="dd-scroll"><table class="dd-tbl" data-source="ai_anomalies" data-row-key="id">
+          <thead><tr><th data-field="month">Month</th><th data-field="restaurant">Restaurant</th><th data-field="signal">Signal</th><th data-field="value">Value</th><th data-field="normal">Normal</th><th data-field="status">Status</th></tr></thead>
+          <tbody data-draw="anom-table"></tbody></table></div>
+        <p class="dd-src"><b>Source:</b> anomaly detection on Gstock, Last.app and Odoo data. With a restaurant in view: its alerts and the chain-wide ones. An anomaly is a reason to investigate, not proof of a problem.</p></div>
+    </div>
+  </section>
+
+  <details class="dd-card" id="definitions">
+    <summary>KPI definitions and data sources</summary>
+    <div class="dd-scroll"><table class="dd-tbl">
+      <thead><tr><th>KPI</th><th>Definition</th><th>Source system</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td>Repeat rate</td><td>Identified guests who visit again within 90 days</td><td>CoverManager + Last.app</td><td>Marketing</td></tr>
+        <tr><td>Regulars lost</td><td>Guests with 3+ visits in 6 months and no visit in the last 60 days (tourists excluded)</td><td>CoverManager</td><td>Marketing</td></tr>
+        <tr><td>NPS / satisfaction</td><td>% promoters − % detractors; 1–5 score by dimension</td><td>CoverManager surveys</td><td>Marketing</td></tr>
+        <tr><td>Order to dish ready</td><td>Minutes from order sent to dish marked ready</td><td>Last.app kitchen display</td><td>Operations</td></tr>
+        <tr><td>Own web share</td><td>Own website orders / all delivery and takeaway sales</td><td>Last.app</td><td>Marketing</td></tr>
+        <tr><td>Food cost</td><td>Food consumed (purchases ± stock change) / food sales</td><td>Odoo + Gstock + Last.app</td><td>Operations</td></tr>
+        <tr><td>Consumption variance</td><td>(Actual use − theoretical use) / theoretical use</td><td>Gstock + Last.app</td><td>Operations</td></tr>
+        <tr><td>Supplier OTIF</td><td>Deliveries on time and complete / all deliveries</td><td>Gstock</td><td>Purchasing</td></tr>
+        <tr><td>Labour cost</td><td>Payroll cost / sales</td><td>Odoo + Factorial</td><td>Operations</td></tr>
+        <tr><td>Prime cost, EBITDA</td><td>(Food + labour) / sales; operating profit before depreciation / sales</td><td>Odoo</td><td>Finance</td></tr>
+        <tr><td>Programme net result</td><td>Measured benefits − running costs − investment, cumulative</td><td>Odoo project account</td><td>Finance</td></tr>
+      </tbody></table></div>
+    <p class="dd-muted">All data is simulated from the case and the assumptions of Presentations 1 and 2. In production, every night the data is copied from each system into the data warehouse (BigQuery) and shown in Power BI, where row-level security gives each restaurant manager only their own restaurant, as the View selector does here. Rankings by restaurant always show all eight, with the one in view highlighted; website, cash, the programme's return and IT are run centrally and are marked Chain-wide when a restaurant is in view.</p>
+  </details>
+<details class="dd-card" id="sources">
+<summary>Data sources (CSV downloads)</summary>
+<div class="dd-scroll"><table class="dd-tbl"><thead><tr><th>System</th><th>What it contains</th><th>File</th></tr></thead><tbody>
+<tr><td>Odoo ERP</td><td>P&L by restaurant: sales, budget, food, labour and prime cost, EBITDA, platform commissions</td><td><a href="data/odoo_monthly.csv" download>odoo_monthly.csv</a></td></tr>
+<tr><td>Odoo</td><td>13-week cash forecast</td><td><a href="data/odoo_cash_forecast.csv" download>odoo_cash_forecast.csv</a></td></tr>
+<tr><td>Odoo</td><td>Programme investment, running costs and benefits</td><td><a href="data/odoo_programme_roi.csv" download>odoo_programme_roi.csv</a></td></tr>
+<tr><td>Last.app POS</td><td>Covers, ticket, sales by channel, kitchen times, dishes out of stock, identified tickets</td><td><a href="data/lastapp_monthly.csv" download>lastapp_monthly.csv</a></td></tr>
+<tr><td>CoverManager</td><td>NPS, repeat rate, regulars lost, complaints, survey response</td><td><a href="data/covermanager_monthly.csv" download>covermanager_monthly.csv</a></td></tr>
+<tr><td>CoverManager</td><td>Satisfaction 1-5 by dimension and restaurant</td><td><a href="data/covermanager_csat_q4.csv" download>covermanager_csat_q4.csv</a></td></tr>
+<tr><td>CoverManager</td><td>Customer segments and estimated lifetime value</td><td><a href="data/covermanager_segments_q4.csv" download>covermanager_segments_q4.csv</a></td></tr>
+<tr><td>CoverManager</td><td>No-shows by group size</td><td><a href="data/covermanager_noshows.csv" download>covermanager_noshows.csv</a></td></tr>
+<tr><td>CoverManager</td><td>New customers by channel</td><td><a href="data/covermanager_new_customers.csv" download>covermanager_new_customers.csv</a></td></tr>
+<tr><td>Gstock</td><td>Consumption variance and days of stock</td><td><a href="data/gstock_monthly.csv" download>gstock_monthly.csv</a></td></tr>
+<tr><td>Gstock</td><td>Supplier deliveries on time and complete</td><td><a href="data/gstock_suppliers_q4.csv" download>gstock_suppliers_q4.csv</a></td></tr>
+<tr><td>Last.app + Gstock</td><td>Menu engineering per dish</td><td><a href="data/menu_engineering_q4.csv" download>menu_engineering_q4.csv</a></td></tr>
+<tr><td>Factorial</td><td>Hours worked and sales per labour hour</td><td><a href="data/factorial_monthly.csv" download>factorial_monthly.csv</a></td></tr>
+<tr><td>Google Analytics 4</td><td>Website visits, bookings, orders, conversion</td><td><a href="data/ga4_web_monthly.csv" download>ga4_web_monthly.csv</a></td></tr>
+<tr><td>Google Business Profile</td><td>Google rating and reviews</td><td><a href="data/google_reviews_monthly.csv" download>google_reviews_monthly.csv</a></td></tr>
+<tr><td>Last.app + CoverManager</td><td>Occupancy by day and time slot</td><td><a href="data/occupancy_q4.csv" download>occupancy_q4.csv</a></td></tr>
+<tr><td>Systems log</td><td>POS availability, integrations, two-factor login, card tokenisation, incidents</td><td><a href="data/systems_security_monthly.csv" download>systems_security_monthly.csv</a></td></tr>
+<tr><td>AI pilot</td><td>Regulars at risk of leaving</td><td><a href="data/ai_churn_risk.csv" download>ai_churn_risk.csv</a></td></tr>
+<tr><td>AI pilot</td><td>Topics of negative comments</td><td><a href="data/ai_sentiment_q4.csv" download>ai_sentiment_q4.csv</a></td></tr>
+<tr><td>AI pilot</td><td>Anomaly alerts</td><td><a href="data/ai_anomalies.csv" download>ai_anomalies.csv</a></td></tr>
+<tr><td>AI pilot</td><td>8-week demand forecast</td><td><a href="data/ai_demand_forecast.csv" download>ai_demand_forecast.csv</a></td></tr>
+</tbody></table></div>
+<p class="dd-muted">All files are simulated sample data, generated by script from the case and the assumptions of Presentations 1 and 2. They are not real figures of any company.</p>
+</details>
+<footer class="dd-foot">AD023 Management IT &amp; Information Systems II · La Salle Campus Barcelona · Case 5 Dine Delight · Pol Cunill, Pol Laraña, Dídac Castro, Albert Bellonch · Simulated data</footer>
+
+  </div>
+</div>
+</div>
+</div>
+<script src="assets/d3.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/dash-shim.js"></script>
+<script src="assets/dd.js"></script>
+<script>dash.start();</script>
+</body>
+</html>

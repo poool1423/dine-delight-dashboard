@@ -1,0 +1,55 @@
+month,m,restaurant,name,hours_worked,sales_per_labour_hour
+Jul,7,R01,Eixample,2420,45.3
+Jul,7,R02,Gracia,2090,45.3
+Jul,7,R03,Diagonal,2310,41.3
+Jul,7,R04,Poblenou,2090,44.5
+Jul,7,R05,Sants,1980,43.9
+Jul,7,R06,Sant Gervasi,2200,46.6
+Jul,7,R07,Born,2310,48.1
+Jul,7,R08,Les Corts,2200,45.2
+Jul,7,ALL,All restaurants,17600,45.0
+Aug,8,R01,Eixample,2211,42.8
+Aug,8,R02,Gracia,1909,42.1
+Aug,8,R03,Diagonal,2110,38.9
+Aug,8,R04,Poblenou,1909,42.5
+Aug,8,R05,Sants,1809,41.5
+Aug,8,R06,Sant Gervasi,2010,43.9
+Aug,8,R07,Born,2110,45.0
+Aug,8,R08,Les Corts,2010,42.4
+Aug,8,ALL,All restaurants,16077,42.4
+Sep,9,R01,Eixample,2420,44.9
+Sep,9,R02,Gracia,2090,43.4
+Sep,9,R03,Diagonal,2310,39.4
+Sep,9,R04,Poblenou,2090,44.2
+Sep,9,R05,Sants,1980,42.7
+Sep,9,R06,Sant Gervasi,2200,45.1
+Sep,9,R07,Born,2310,46.5
+Sep,9,R08,Les Corts,2200,43.9
+Sep,9,ALL,All restaurants,17600,43.8
+Oct,10,R01,Eixample,2463,46.7
+Oct,10,R02,Gracia,2127,45.5
+Oct,10,R03,Diagonal,2351,41.4
+Oct,10,R04,Poblenou,2127,45.7
+Oct,10,R05,Sants,2015,45.1
+Oct,10,R06,Sant Gervasi,2239,47.7
+Oct,10,R07,Born,2351,49.6
+Oct,10,R08,Les Corts,2239,46.0
+Oct,10,ALL,All restaurants,17915,46.0
+Nov,11,R01,Eixample,2405,44.4
+Nov,11,R02,Gracia,2077,43.6
+Nov,11,R03,Diagonal,2296,38.9
+Nov,11,R04,Poblenou,2077,43.6
+Nov,11,R05,Sants,1968,43.4
+Nov,11,R06,Sant Gervasi,2187,45.1
+Nov,11,R07,Born,2296,47.1
+Nov,11,R08,Les Corts,2187,44.5
+Nov,11,ALL,All restaurants,17494,43.8
+Dec,12,R01,Eixample,2562,48.0
+Dec,12,R02,Gracia,2213,47.1
+Dec,12,R03,Diagonal,2446,41.6
+Dec,12,R04,Poblenou,2213,47.8
+Dec,12,R05,Sants,2097,46.4
+Dec,12,R06,Sant Gervasi,2329,49.5
+Dec,12,R07,Born,2446,50.9
+Dec,12,R08,Les Corts,2329,48.2
+Dec,12,ALL,All restaurants,18636,47.4

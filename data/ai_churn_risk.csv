@@ -1,0 +1,10 @@
+restaurant,name,regulars,at_risk,at_risk_pct
+R01,Eixample,990,98,9.9
+R02,Gracia,855,93,10.9
+R03,Diagonal,945,203,21.5
+R04,Poblenou,855,87,10.2
+R05,Sants,810,82,10.1
+R06,Sant Gervasi,900,94,10.4
+R07,Born,945,76,8.0
+R08,Les Corts,900,108,12.0
+ALL,All restaurants,7200,841,11.7

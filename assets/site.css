@@ -1,0 +1,18 @@
+:root{--color-fg:#16192b;--color-fg-muted:#5f6475;--color-bg:#f3f5f9;--color-panel:#ffffff;--color-border-line:#e4e8f0;--color-ok:#14935d;--color-warn:#c27c0e;--color-bad:#d23c3c;
+--font-anthropic-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-anthropic-serif:Georgia,"Times New Roman",serif;
+--cds-font-size-caption:12px;--cds-font-size-body:15px;--cds-font-size-heading:18px;--cds-font-size-title:28px;--cds-font-weight-medium:500;
+--cds-gap-xs:4px;--cds-gap-sm:8px;--cds-gap-md:14px;--cds-gap-lg:22px;--cds-gap-xl:32px;--cds-pad-xs:4px;--cds-pad-sm:8px;--cds-pad-md:12px;--cds-pad-lg:16px;--cds-pad-xl:24px;--cds-radius:8px;
+--cds-chart-muted:#9aa1b0;--cds-chart-status-critical:#d23c3c;--cds-chart-grid:#edf0f5;--cds-chart-axis:#cfd5df;--cds-chart-reference:#a3aab8;--cds-text-secondary:#6b7183;
+--cds-surface-popover:#ffffff;--cds-border:#dfe3ea;--cds-shadow-popover:0 6px 20px rgba(16,24,40,.12)}
+@media (prefers-color-scheme:dark){:root{--color-fg:#e8eaf0;--color-fg-muted:#a0a6b5;--color-bg:#0e1020;--color-panel:#171a2c;--color-border-line:#2a2e44;--color-ok:#3fbf86;--color-warn:#e0a33a;--color-bad:#ef6464;
+--cds-chart-muted:#7d8499;--cds-chart-status-critical:#ef6464;--cds-chart-grid:#23263a;--cds-chart-axis:#3a3f57;--cds-chart-reference:#6c7390;--cds-text-secondary:#a0a6b5;--cds-surface-popover:#1f2236;--cds-border:#33384f}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--color-bg);color:var(--color-fg);font-family:var(--font-anthropic-sans);line-height:1.5}
+#dash-root{max-width:1480px;margin:0 auto;padding:24px}
+select.dash-select{appearance:none;-webkit-appearance:none;font:inherit;color:var(--color-fg);background-color:var(--color-panel);border:1px solid var(--color-border-line);padding:6px 34px 6px 14px;cursor:pointer;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231C84E1' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+select.dash-select:hover{border-color:#1C84E1}
+.dd a{color:#1C84E1}
+.dd-foot{font-size:12px;color:var(--color-fg-muted);text-align:center;padding:8px 0 4px}
+@media (max-width:600px){#dash-root{padding:12px}}

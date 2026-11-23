@@ -1,0 +1,46 @@
+restaurant,name,group_size,deposit,bookings,no_show_pct
+R01,Eixample,1-2,No,2950,2.8
+R02,Gracia,1-2,No,2541,3.2
+R03,Diagonal,1-2,No,2642,2.4
+R04,Poblenou,1-2,No,2582,3.1
+R05,Sants,1-2,No,2416,2.6
+R06,Sant Gervasi,1-2,No,2717,2.3
+R07,Born,1-2,No,2839,3.4
+R08,Les Corts,1-2,No,2713,2.6
+ALL,All restaurants,1-2,No,21400,2.8
+R01,Eixample,3-4,No,2178,3.7
+R02,Gracia,3-4,No,1876,4.7
+R03,Diagonal,3-4,No,1951,3.4
+R04,Poblenou,3-4,No,1906,4.2
+R05,Sants,3-4,No,1784,4.0
+R06,Sant Gervasi,3-4,No,2006,3.2
+R07,Born,3-4,No,2096,4.6
+R08,Les Corts,3-4,No,2003,3.5
+ALL,All restaurants,3-4,No,15800,3.9
+R01,Eixample,5-8,No,571,5.8
+R02,Gracia,5-8,No,540,7.1
+R03,Diagonal,5-8,No,409,5.3
+R04,Poblenou,5-8,No,599,6.8
+R05,Sants,5-8,No,374,6.0
+R06,Sant Gervasi,5-8,No,473,5.1
+R07,Born,5-8,No,494,7.6
+R08,Les Corts,5-8,No,840,5.8
+ALL,All restaurants,5-8,No,4300,6.2
+R01,Eixample,9-12,No,109,9.0
+R02,Gracia,9-12,No,103,10.7
+R03,Diagonal,9-12,No,78,7.8
+R04,Poblenou,9-12,No,114,9.5
+R05,Sants,9-12,No,72,9.3
+R06,Sant Gervasi,9-12,No,90,7.9
+R07,Born,9-12,No,94,10.5
+R08,Les Corts,9-12,No,160,8.2
+ALL,All restaurants,9-12,No,820,9.1
+R01,Eixample,13+,Yes,41,2.3
+R02,Gracia,13+,Yes,39,2.7
+R03,Diagonal,13+,Yes,29,1.9
+R04,Poblenou,13+,Yes,43,2.6
+R05,Sants,13+,Yes,27,2.3
+R06,Sant Gervasi,13+,Yes,34,1.9
+R07,Born,13+,Yes,36,2.7
+R08,Les Corts,13+,Yes,61,2.0
+ALL,All restaurants,13+,Yes,310,2.3

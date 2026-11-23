@@ -1,0 +1,6 @@
+id,month,restaurant,area,signal,value,normal,status
+A1,Nov,R05,Stock,Consumption variance above normal range,6.3%,1.5-2.8%,Investigating
+A2,Dec,R05,Stock,Variance concentrated in fish and olive oil,+41% vs recipe,+/-8%,Investigating
+A3,Nov,R03,Service,Lunch ticket time rising for 6 weeks,23.5 min,13-17 min,Action planned
+A4,Dec,All,Purchasing,Olive oil price above agreed price,+12%,+/-3%,Renegotiating
+A5,Dec,All,Cash,Forecast balance below minimum in week 9,236k,>250k,Action planned

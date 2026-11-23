@@ -1,0 +1,73 @@
+month,m,restaurant,name,nps,repeat_rate_pct,churn_regulars_pct,complaints_per_1000,complaints_resolved_48h_pct,survey_response_pct
+May,5,R01,Eixample,36,,,7.0,58.3,8.4
+May,5,R02,Gracia,36,,,7.4,58.4,7.7
+May,5,R03,Diagonal,30,,,10.7,57.0,8.5
+May,5,R04,Poblenou,36,,,7.2,57.5,7.9
+May,5,R05,Sants,36,,,7.2,57.0,7.9
+May,5,R06,Sant Gervasi,36,,,7.3,57.2,8.1
+May,5,R07,Born,56,,,7.2,58.4,8.0
+May,5,R08,Les Corts,37,,,7.1,57.2,7.9
+May,5,ALL,All restaurants,38,,,7.7,57.6,8.1
+Jun,6,R01,Eixample,37,,,7.0,63.8,9.0
+Jun,6,R02,Gracia,37,,,6.7,63.3,8.8
+Jun,6,R03,Diagonal,30,,,10.2,62.4,8.8
+Jun,6,R04,Poblenou,38,,,6.9,62.0,8.8
+Jun,6,R05,Sants,38,,,6.8,62.5,9.3
+Jun,6,R06,Sant Gervasi,38,,,6.7,63.4,9.1
+Jun,6,R07,Born,57,,,7.0,62.1,9.6
+Jun,6,R08,Les Corts,38,,,6.9,62.7,9.1
+Jun,6,ALL,All restaurants,39,,,7.3,62.8,9.1
+Jul,7,R01,Eixample,40,33.9,,6.3,67.3,10.5
+Jul,7,R02,Gracia,40,34.0,,6.4,67.1,10.6
+Jul,7,R03,Diagonal,29,33.1,,10.2,67.5,10.4
+Jul,7,R04,Poblenou,40,34.0,,6.5,68.3,10.9
+Jul,7,R05,Sants,40,34.1,,6.5,67.7,10.1
+Jul,7,R06,Sant Gervasi,39,34.1,,6.6,67.7,10.5
+Jul,7,R07,Born,58,33.2,,6.3,68.1,10.8
+Jul,7,R08,Les Corts,40,34.2,,6.6,67.6,10.3
+Jul,7,ALL,All restaurants,41,33.8,,6.9,67.7,10.5
+Aug,8,R01,Eixample,42,35.4,,6.2,72.5,11.4
+Aug,8,R02,Gracia,41,35.8,,6.1,73.4,11.6
+Aug,8,R03,Diagonal,28,32.1,,9.5,72.6,11.5
+Aug,8,R04,Poblenou,41,35.7,,6.1,72.1,11.4
+Aug,8,R05,Sants,41,35.4,,5.9,72.0,12.3
+Aug,8,R06,Sant Gervasi,41,35.6,,6.2,73.1,11.8
+Aug,8,R07,Born,59,34.1,,5.9,72.4,11.8
+Aug,8,R08,Les Corts,42,35.8,,6.1,73.5,11.6
+Aug,8,ALL,All restaurants,42,35.0,,6.5,72.7,11.7
+Sep,9,R01,Eixample,44,37.0,23.3,5.7,77.0,12.8
+Sep,9,R02,Gracia,43,37.4,23.1,5.8,77.4,12.9
+Sep,9,R03,Diagonal,26,31.3,26.9,9.2,77.8,12.8
+Sep,9,R04,Poblenou,43,36.9,22.8,5.6,77.8,13.6
+Sep,9,R05,Sants,44,37.4,22.9,5.5,78.3,13.4
+Sep,9,R06,Sant Gervasi,44,36.9,22.9,5.7,78.1,13.1
+Sep,9,R07,Born,60,34.6,23.3,5.5,77.9,13.5
+Sep,9,R08,Les Corts,44,37.4,22.7,5.5,77.4,13.6
+Sep,9,ALL,All restaurants,44,36.1,23.5,6.1,77.7,13.2
+Oct,10,R01,Eixample,45,38.6,21.3,5.1,82.9,14.0
+Oct,10,R02,Gracia,45,38.7,21.5,5.2,81.8,14.3
+Oct,10,R03,Diagonal,25,30.7,28.3,8.7,83.1,14.5
+Oct,10,R04,Poblenou,46,38.4,21.3,5.0,81.7,14.9
+Oct,10,R05,Sants,45,38.6,21.2,5.1,81.8,14.5
+Oct,10,R06,Sant Gervasi,45,38.6,21.4,5.3,81.5,14.1
+Oct,10,R07,Born,62,35.7,21.2,5.0,83.1,14.4
+Oct,10,R08,Les Corts,45,38.7,21.2,5.1,82.3,14.9
+Oct,10,ALL,All restaurants,45,37.2,22.2,5.6,82.3,14.4
+Nov,11,R01,Eixample,47,40.5,19.9,4.9,86.5,16.0
+Nov,11,R02,Gracia,48,40.0,19.8,4.9,86.2,16.1
+Nov,11,R03,Diagonal,24,30.2,29.9,8.3,87.7,16.0
+Nov,11,R04,Poblenou,48,40.4,19.8,4.6,87.2,15.6
+Nov,11,R05,Sants,47,40.4,20.1,4.6,86.8,16.0
+Nov,11,R06,Sant Gervasi,46,40.0,19.6,5.0,87.5,16.1
+Nov,11,R07,Born,64,36.2,20.0,4.7,88.1,15.8
+Nov,11,R08,Les Corts,47,40.1,19.5,4.6,86.4,15.8
+Nov,11,ALL,All restaurants,47,38.4,21.1,5.2,87.1,15.9
+Dec,12,R01,Eixample,49,41.9,18.3,4.3,92.2,17.0
+Dec,12,R02,Gracia,49,41.7,18.3,4.4,92.9,17.2
+Dec,12,R03,Diagonal,23,29.2,31.5,8.0,92.3,17.3
+Dec,12,R04,Poblenou,49,41.6,18.0,4.3,91.1,16.8
+Dec,12,R05,Sants,50,41.6,18.4,4.2,91.5,16.7
+Dec,12,R06,Sant Gervasi,50,41.8,18.4,4.5,92.7,16.9
+Dec,12,R07,Born,64,36.7,17.9,4.5,92.3,17.2
+Dec,12,R08,Les Corts,48,41.6,18.0,4.2,92.7,17.3
+Dec,12,ALL,All restaurants,48,39.5,19.8,4.8,92.2,17.1

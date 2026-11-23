@@ -1,0 +1,109 @@
+month,m,restaurant,name,google_rating,new_reviews
+Jan,1,R01,Eixample,4.08,42
+Jan,1,R02,Gracia,4.08,36
+Jan,1,R03,Diagonal,4.06,37
+Jan,1,R04,Poblenou,4.1,35
+Jan,1,R05,Sants,4.09,31
+Jan,1,R06,Sant Gervasi,4.09,39
+Jan,1,R07,Born,4.58,60
+Jan,1,R08,Les Corts,4.09,39
+Jan,1,ALL,All restaurants,4.16,319
+Feb,2,R01,Eixample,4.11,40
+Feb,2,R02,Gracia,4.11,34
+Feb,2,R03,Diagonal,4.06,37
+Feb,2,R04,Poblenou,4.11,37
+Feb,2,R05,Sants,4.1,35
+Feb,2,R06,Sant Gervasi,4.1,39
+Feb,2,R07,Born,4.62,66
+Feb,2,R08,Les Corts,4.08,38
+Feb,2,ALL,All restaurants,4.16,326
+Mar,3,R01,Eixample,4.11,39
+Mar,3,R02,Gracia,4.08,36
+Mar,3,R03,Diagonal,4.06,38
+Mar,3,R04,Poblenou,4.12,33
+Mar,3,R05,Sants,4.1,35
+Mar,3,R06,Sant Gervasi,4.09,39
+Mar,3,R07,Born,4.6,65
+Mar,3,R08,Les Corts,4.11,40
+Mar,3,ALL,All restaurants,4.16,325
+Apr,4,R01,Eixample,4.09,41
+Apr,4,R02,Gracia,4.1,33
+Apr,4,R03,Diagonal,4.05,37
+Apr,4,R04,Poblenou,4.1,33
+Apr,4,R05,Sants,4.09,32
+Apr,4,R06,Sant Gervasi,4.11,40
+Apr,4,R07,Born,4.59,62
+Apr,4,R08,Les Corts,4.09,36
+Apr,4,ALL,All restaurants,4.16,314
+May,5,R01,Eixample,4.14,45
+May,5,R02,Gracia,4.12,35
+May,5,R03,Diagonal,4.04,42
+May,5,R04,Poblenou,4.12,41
+May,5,R05,Sants,4.12,32
+May,5,R06,Sant Gervasi,4.12,38
+May,5,R07,Born,4.63,66
+May,5,R08,Les Corts,4.11,37
+May,5,ALL,All restaurants,4.18,336
+Jun,6,R01,Eixample,4.18,44
+Jun,6,R02,Gracia,4.16,39
+Jun,6,R03,Diagonal,4.02,41
+Jun,6,R04,Poblenou,4.17,38
+Jun,6,R05,Sants,4.18,35
+Jun,6,R06,Sant Gervasi,4.16,38
+Jun,6,R07,Born,4.66,69
+Jun,6,R08,Les Corts,4.14,38
+Jun,6,ALL,All restaurants,4.2,342
+Jul,7,R01,Eixample,4.18,51
+Jul,7,R02,Gracia,4.17,40
+Jul,7,R03,Diagonal,4.0,46
+Jul,7,R04,Poblenou,4.2,42
+Jul,7,R05,Sants,4.19,39
+Jul,7,R06,Sant Gervasi,4.2,43
+Jul,7,R07,Born,4.69,71
+Jul,7,R08,Les Corts,4.18,43
+Jul,7,ALL,All restaurants,4.23,375
+Aug,8,R01,Eixample,4.22,47
+Aug,8,R02,Gracia,4.24,43
+Aug,8,R03,Diagonal,3.99,49
+Aug,8,R04,Poblenou,4.22,41
+Aug,8,R05,Sants,4.24,44
+Aug,8,R06,Sant Gervasi,4.22,43
+Aug,8,R07,Born,4.73,70
+Aug,8,R08,Les Corts,4.22,46
+Aug,8,ALL,All restaurants,4.25,383
+Sep,9,R01,Eixample,4.26,47
+Sep,9,R02,Gracia,4.26,42
+Sep,9,R03,Diagonal,3.95,46
+Sep,9,R04,Poblenou,4.24,47
+Sep,9,R05,Sants,4.25,40
+Sep,9,R06,Sant Gervasi,4.24,49
+Sep,9,R07,Born,4.77,78
+Sep,9,R08,Les Corts,4.24,45
+Sep,9,ALL,All restaurants,4.28,394
+Oct,10,R01,Eixample,4.27,48
+Oct,10,R02,Gracia,4.29,48
+Oct,10,R03,Diagonal,3.95,50
+Oct,10,R04,Poblenou,4.27,48
+Oct,10,R05,Sants,4.26,41
+Oct,10,R06,Sant Gervasi,4.27,46
+Oct,10,R07,Born,4.8,79
+Oct,10,R08,Les Corts,4.29,51
+Oct,10,ALL,All restaurants,4.3,411
+Nov,11,R01,Eixample,4.32,56
+Nov,11,R02,Gracia,4.31,47
+Nov,11,R03,Diagonal,3.91,48
+Nov,11,R04,Poblenou,4.32,50
+Nov,11,R05,Sants,4.3,46
+Nov,11,R06,Sant Gervasi,4.29,49
+Nov,11,R07,Born,4.8,79
+Nov,11,R08,Les Corts,4.33,46
+Nov,11,ALL,All restaurants,4.32,421
+Dec,12,R01,Eixample,4.33,52
+Dec,12,R02,Gracia,4.32,48
+Dec,12,R03,Diagonal,3.88,49
+Dec,12,R04,Poblenou,4.35,49
+Dec,12,R05,Sants,4.35,44
+Dec,12,R06,Sant Gervasi,4.33,48
+Dec,12,R07,Born,4.8,83
+Dec,12,R08,Les Corts,4.35,48
+Dec,12,ALL,All restaurants,4.34,421

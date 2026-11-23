@@ -1,0 +1,55 @@
+month,m,restaurant,name,consumption_variance_pct,days_of_stock
+Jul,7,R01,Eixample,4.5,9.5
+Jul,7,R02,Gracia,4.5,9.4
+Jul,7,R03,Diagonal,4.7,9.4
+Jul,7,R04,Poblenou,4.6,9.7
+Jul,7,R05,Sants,6.1,11.6
+Jul,7,R06,Sant Gervasi,4.6,9.6
+Jul,7,R07,Born,4.7,9.4
+Jul,7,R08,Les Corts,4.5,9.7
+Jul,7,ALL,All restaurants,4.8,9.8
+Aug,8,R01,Eixample,4.0,8.7
+Aug,8,R02,Gracia,4.1,8.6
+Aug,8,R03,Diagonal,4.1,8.9
+Aug,8,R04,Poblenou,4.2,8.5
+Aug,8,R05,Sants,6.1,10.6
+Aug,8,R06,Sant Gervasi,4.1,8.7
+Aug,8,R07,Born,4.3,8.8
+Aug,8,R08,Les Corts,4.0,8.5
+Aug,8,ALL,All restaurants,4.3,8.9
+Sep,9,R01,Eixample,3.6,7.9
+Sep,9,R02,Gracia,3.6,8.0
+Sep,9,R03,Diagonal,3.7,8.0
+Sep,9,R04,Poblenou,3.5,7.8
+Sep,9,R05,Sants,6.0,9.9
+Sep,9,R06,Sant Gervasi,3.5,7.8
+Sep,9,R07,Born,3.6,7.8
+Sep,9,R08,Les Corts,3.8,7.8
+Sep,9,ALL,All restaurants,3.9,8.1
+Oct,10,R01,Eixample,3.1,7.1
+Oct,10,R02,Gracia,3.2,7.1
+Oct,10,R03,Diagonal,3.1,7.0
+Oct,10,R04,Poblenou,3.2,7.2
+Oct,10,R05,Sants,6.3,8.9
+Oct,10,R06,Sant Gervasi,3.2,7.0
+Oct,10,R07,Born,3.3,7.0
+Oct,10,R08,Les Corts,3.0,7.0
+Oct,10,ALL,All restaurants,3.5,7.3
+Nov,11,R01,Eixample,2.6,6.2
+Nov,11,R02,Gracia,2.6,6.3
+Nov,11,R03,Diagonal,2.7,6.1
+Nov,11,R04,Poblenou,2.8,6.1
+Nov,11,R05,Sants,6.2,8.4
+Nov,11,R06,Sant Gervasi,2.6,6.3
+Nov,11,R07,Born,2.6,6.3
+Nov,11,R08,Les Corts,2.7,6.2
+Nov,11,ALL,All restaurants,3.1,6.5
+Dec,12,R01,Eixample,2.1,5.6
+Dec,12,R02,Gracia,2.1,5.6
+Dec,12,R03,Diagonal,2.1,5.3
+Dec,12,R04,Poblenou,2.3,5.5
+Dec,12,R05,Sants,6.5,7.6
+Dec,12,R06,Sant Gervasi,2.3,5.4
+Dec,12,R07,Born,2.3,5.2
+Dec,12,R08,Les Corts,2.2,5.5
+Dec,12,ALL,All restaurants,2.7,5.6

@@ -1,0 +1,9 @@
+restaurant,name,negative_mentions,food_pct,speed_pct,staff_pct,price_pct,ambience_pct
+R01,Eixample,51,28,22,18,20,12
+R02,Gracia,51,41,18,15,16,10
+R03,Diagonal,115,16,46,14,14,10
+R04,Poblenou,58,41,18,15,16,10
+R05,Sants,66,28,22,18,20,12
+R06,Sant Gervasi,51,28,22,18,20,12
+R07,Born,58,18,20,16,14,32
+R08,Les Corts,53,28,22,18,20,12
