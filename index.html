@@ -122,7 +122,7 @@
 <!-- CUSTOMER EXPERIENCE -->
 <section class="dd-tab" id="customer">
 <div class="dd-intro">
-<h2>Board scorecard · Q1 Are we meeting our strategic objectives?</h2>
+<h2>Board scorecard · Are we meeting our strategic objectives?</h2>
 <p class="dd-muted"><b data-draw="rest-name">—</b> · December values against the year-one targets. The customer is the driver of the business; the other four objectives protect growth and margin.</p>
 </div>
 <div class="dd-grid k" id="scorecard">
@@ -135,7 +135,7 @@
 
 <div class="dd-grid two">
 <div class="dd-card dd-kpi dd-star" id="north-star">
-<span class="dd-obj">North-star KPI · Q2 Are our guests coming back?</span>
+<span class="dd-obj">North-star KPI · Are our guests coming back?</span>
 <span class="dd-lbl">Identified guests who returned within 90 days, December</span>
 <span class="dd-val" data-draw="val" data-source="v_cm" data-field="repeat_rate_pct" data-where="month=Dec" data-fmt="pct">—</span>
 <span class="dd-muted">First measured in July (90 days after CoverManager went live): <span data-draw="val" data-source="v_cm" data-field="repeat_rate_pct" data-where="month=Jul" data-fmt="pct">—</span>. Target ≥ 40%.</span>
@@ -158,7 +158,7 @@
 
 <div class="dd-grid two">
 <div class="dd-card" id="csat-card">
-<h3>Q2 · Where does the experience fail? Satisfaction (1–5) by restaurant and dimension, Q4</h3>
+<h3>Where does the experience fail? Satisfaction (1–5) by restaurant and dimension, Q4</h3>
 <div class="dd-fig s" data-draw="csat-heat" data-source="cm_csat"></div>
 <p class="dd-src"><b>Source:</b> CoverManager post-visit survey. Read it by rows: R03 fails on speed, R02 and R04 on food (the restaurants served by fish supplier S1).</p>
 </div>
@@ -173,7 +173,7 @@
 <p class="dd-muted">Experience → satisfaction → repeat visits → sales. The operational drivers below explain the satisfaction scores above.</p></div>
 <div class="dd-grid two">
 <div class="dd-card" id="svc-card">
-<h3>Q10 · Order to dish ready, December (minutes)</h3>
+<h3>Order to dish ready, December (minutes)</h3>
 <div class="dd-fig s" data-draw="svc-bars" data-source="lastapp"></div>
 <p class="dd-src"><b>Source:</b> Last.app kitchen display (time from order sent to dish marked ready). Dashed line: 15-minute target.</p>
 </div>
@@ -188,14 +188,14 @@
 <p class="dd-src"><b>Source:</b> CoverManager. Regulars = 3 or more visits in 6 months; tourists are excluded. Dashed line: 20% limit.</p>
 </div>
 <div class="dd-card" id="seg-card">
-<h3>Q3 · Which customers are most valuable? Estimated customer lifetime value by segment</h3>
+<h3>Which customers are most valuable? Estimated customer lifetime value by segment</h3>
 <div class="dd-fig s" data-draw="segments" data-source="cm_segments"></div>
 <p class="dd-src"><b>Source:</b> CoverManager (customers, visits) and Last.app (spend). Estimate: spend × visits per year × expected years as a customer. Less than one year of history, so read it as a ranking, not an exact value.</p>
 </div>
 </div>
 
 <div class="dd-card" id="menu-card">
-<h3>Q7 · Which dishes do we keep, reprice, redesign or remove? Menu engineering, Q4</h3>
+<h3>Which dishes do we keep, reprice, redesign or remove? Menu engineering, Q4</h3>
 <div class="dd-fig t" style="min-height:380px" data-draw="menu" data-source="menu"></div>
 <p class="dd-src"><b>Source:</b> Last.app (units sold, price) and Gstock (recipe cost). Lines: 70% of average popularity and average margin of the restaurant in view. Horizontal axis on a square-root scale so the less popular dishes do not overlap. Stars: keep · Plowhorses: reprice or cut portion cost · Puzzles: promote · Dogs: redesign or remove.</p>
 </div>
@@ -222,7 +222,7 @@
 
 <!-- COMMERCIAL -->
 <section class="dd-tab" id="commercial" hidden>
-<div class="dd-intro"><h2>Commercial &amp; channels · Q6 Which channels work best and what do they cost?</h2>
+<div class="dd-intro"><h2>Commercial &amp; channels · Which channels work best and what do they cost?</h2>
 <p class="dd-muted"><b data-draw="rest-name">—</b> · December values. Sales are taken from Odoo (official figure); day-to-day sales, covers and channels from Last.app. Both match because the Last.app daily closing feeds Odoo.</p></div>
 <div class="dd-grid k">
 <div class="dd-card dd-kpi" id="c-rev"><div class="dd-kh"><span class="dd-lbl">Sales</span><span class="dd-per">December</span></div><span class="dd-val">€<span data-draw="val" data-source="v_odoo" data-field="revenue_k" data-where="month=Dec">—</span>k</span><span class="dd-muted">Budget €<span data-draw="val" data-source="v_odoo" data-field="budget_k" data-where="month=Dec">—</span>k</span></div>
@@ -245,7 +245,7 @@
 
 <!-- OPERATIONS -->
 <section class="dd-tab" id="operations" hidden>
-<div class="dd-intro"><h2>Operations · Q8 Q9 Q10 Q11 Are we wasting food, are suppliers reliable and do we have the right staff?</h2>
+<div class="dd-intro"><h2>Operations · Are we wasting food, are suppliers reliable and do we have the right staff?</h2>
 <p class="dd-muted"><b data-draw="rest-name">—</b> · December values. Stock data starts in July, when Gstock went live: before that, inventory was counted by hand and the waste could not be measured.</p></div>
 <div class="dd-grid k">
 <div class="dd-card dd-kpi" id="p-fc"><div class="dd-kh"><span class="dd-lbl">Food cost</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="food_cost_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">Target ≤ 30% · January <span data-draw="val" data-source="v_odoo" data-field="food_cost_pct" data-where="month=Jan" data-fmt="pct">—</span></span></div>
@@ -259,16 +259,16 @@
 <div class="dd-card" id="fc-bars-card"><h3>Food cost by restaurant, December (%)</h3><div class="dd-fig s" data-draw="fc-bars" data-source="odoo"></div><p class="dd-dec"><b>Decision it supports:</b> change the price or the recipe of the dishes that push it up (see the menu matrix).</p></div>
 <div class="dd-card" id="var-card"><h3>Consumption variance by month (%)</h3><div class="dd-fig s" data-draw="var-trend" data-source="gstock"></div><p class="dd-src"><b>Source:</b> Gstock. Theoretical use (Last.app sales × recipe) vs actual use (stock counts). Consolidated: the chain against its highest restaurant.</p></div>
 <div class="dd-card" id="var-bars-card"><h3>Consumption variance by restaurant, December (%)</h3><div class="dd-fig s" data-draw="var-bars" data-source="gstock"></div><p class="dd-src"><b>Source:</b> Gstock. Dashed line: 2% limit.</p></div>
-<div class="dd-card" id="otif-card"><h3>Q9 · Supplier deliveries on time and complete, Q4 (%)</h3><div class="dd-fig s" data-draw="otif" data-source="gstock_suppliers"></div><p class="dd-src"><b>Source:</b> Gstock (order lines vs receptions, by Supplier ID). With a restaurant in view, only the suppliers that deliver to it. Dashed line: 95% target.</p></div>
+<div class="dd-card" id="otif-card"><h3>Supplier deliveries on time and complete, Q4 (%)</h3><div class="dd-fig s" data-draw="otif" data-source="gstock_suppliers"></div><p class="dd-src"><b>Source:</b> Gstock (order lines vs receptions, by Supplier ID). With a restaurant in view, only the suppliers that deliver to it. Dashed line: 95% target.</p></div>
 <div class="dd-card" id="d86-card"><h3>Dishes out of stock per week, December</h3><div class="dd-fig s" data-draw="d86" data-source="lastapp"></div><p class="dd-src"><b>Source:</b> Last.app (dish deactivated during service) with Gstock stock. Dashed line: limit of 3 a week.</p></div>
-<div class="dd-card" id="occ-card"><h3>Q10 · When are we full? Occupancy by day and time, Q4 (%)</h3><div class="dd-fig s" data-draw="occ-heat" data-source="occupancy"></div><p class="dd-src"><b>Source:</b> Last.app covers and CoverManager bookings over seats. Peaks: weekday lunch and weekend dinner.</p></div>
-<div class="dd-card" id="lab-card"><h3>Q11 · Labour cost by restaurant, December (%)</h3><div class="dd-fig s" data-draw="labour-bars" data-source="odoo factorial"></div><p class="dd-src"><b>Source:</b> Odoo (payroll) and Factorial (hours). Note: sales per hour worked.</p></div>
+<div class="dd-card" id="occ-card"><h3>When are we full? Occupancy by day and time, Q4 (%)</h3><div class="dd-fig s" data-draw="occ-heat" data-source="occupancy"></div><p class="dd-src"><b>Source:</b> Last.app covers and CoverManager bookings over seats. Peaks: weekday lunch and weekend dinner.</p></div>
+<div class="dd-card" id="lab-card"><h3>Labour cost by restaurant, December (%)</h3><div class="dd-fig s" data-draw="labour-bars" data-source="odoo factorial"></div><p class="dd-src"><b>Source:</b> Odoo (payroll) and Factorial (hours). Note: sales per hour worked.</p></div>
 </div>
 </section>
 
 <!-- FINANCE -->
 <section class="dd-tab" id="finance" hidden>
-<div class="dd-intro"><h2>Finance · Q4 Q5 Q12 Which restaurants are profitable, is the investment paying back and will we have enough cash?</h2>
+<div class="dd-intro"><h2>Finance · Which restaurants are profitable, is the investment paying back and will we have enough cash?</h2>
 <p class="dd-muted"><b data-draw="rest-name">—</b> · December values from Odoo, with profit and loss by Restaurant ID.</p></div>
 <div class="dd-grid k">
 <div class="dd-card dd-kpi" id="f-ebitda"><div class="dd-kh"><span class="dd-lbl">EBITDA margin</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_odoo" data-field="ebitda_pct" data-where="month=Dec" data-fmt="pct">—</span><span class="dd-muted">Target ≥ 12% · January <span data-draw="val" data-source="v_odoo" data-field="ebitda_pct" data-where="month=Jan" data-fmt="pct">—</span></span></div>
@@ -276,7 +276,7 @@
 <div class="dd-card dd-kpi" id="f-cash"><span class="dd-tag" hidden>Chain-wide</span><div class="dd-kh"><span class="dd-lbl">Lowest cash balance</span><span class="dd-per">Next 13 weeks</span></div><span class="dd-val">€<span data-draw="val" data-source="odoo_cash" data-field="balance_k" data-where="week=W9">—</span>k</span><span class="dd-muted">Week 9 · minimum €250k</span></div>
 <div class="dd-card dd-kpi" id="f-net"><span class="dd-tag" hidden>Chain-wide</span><div class="dd-kh"><span class="dd-lbl">Programme net result to date, €k</span><span class="dd-per">Year 1</span></div><span class="dd-val" data-draw="val" data-source="odoo_roi" data-field="net_cum_k" data-where="month=Dec Y1">—</span><span class="dd-muted">Investment €<span data-draw="val" data-source="odoo_roi" data-field="investment_cum_k" data-where="month=Dec Y1">—</span>k · payback forecast: <b data-draw="payback" data-source="odoo_roi" data-field="month">—</b></span></div>
 </div>
-<div class="dd-intro" id="pnl"><h2>P&amp;L · Q4 Which restaurants are profitable?</h2>
+<div class="dd-intro" id="pnl"><h2>P&amp;L · Which restaurants are profitable?</h2>
 <p class="dd-muted">Management P&amp;L from Odoo analytic accounting: every income and cost is booked to a Restaurant ID, so each restaurant has its own P&amp;L every month. Before the programme, the external advisor only closed the accounts of the whole chain, weeks after month end.</p></div>
 <div class="dd-grid two">
 <div class="dd-card" id="pnl-fall-card"><h3>From sales to EBITDA, December (€k)</h3><div class="dd-fig s" data-draw="pnl-fall" data-source="v_pnl"></div><p class="dd-src"><b>Source:</b> Odoo (sales from the Last.app daily closing, food cost from Gstock purchases and stock valuation, payroll, platform settlements and supplier invoices). Rent, utilities, marketing and other costs are project assumptions; IT &amp; systems includes the running cost of the programme.</p></div>
@@ -287,14 +287,14 @@
 <div class="dd-grid two">
 <div class="dd-card" id="ebitda-card"><h3>EBITDA margin by restaurant, December (%)</h3><div class="dd-fig s" data-draw="ebitda-bars" data-source="odoo odoo_pnl"></div><p class="dd-dec"><b>Decision it supports:</b> which restaurant needs an improvement plan (R07 for food cost, R03 for sales).</p></div>
 <div class="dd-card" id="prime-card"><h3>Prime cost and its parts by month (%)</h3><div class="dd-fig" data-draw="prime-trend" data-source="odoo"></div><p class="dd-src"><b>Source:</b> Odoo. Food and labour are the two costs management can control.</p></div>
-<div class="dd-card" id="cash-card"><span class="dd-tag" hidden>Chain-wide</span><h3>Q12 · Cash balance forecast, next 13 weeks (€k)</h3><div class="dd-fig s" data-draw="cash" data-source="odoo_cash"></div><p class="dd-src"><b>Source:</b> Odoo (bank balance, payables, receivables, platform settlements). Dashed line: €250k minimum.</p></div>
-<div class="dd-card" id="roi-card"><span class="dd-tag" hidden>Chain-wide</span><h3>Q5 · Is the investment paying back? Programme net result, cumulative (€k)</h3><div class="dd-fig" data-draw="roi" data-source="odoo_roi"></div><p class="dd-src"><b>Source:</b> Odoo project account (investment and running costs) and measured benefits: commissions saved, lower food cost and extra margin from repeat guests. Benefits ramp up after each phase, so payback comes later than at full speed.</p></div>
+<div class="dd-card" id="cash-card"><span class="dd-tag" hidden>Chain-wide</span><h3>Cash balance forecast, next 13 weeks (€k)</h3><div class="dd-fig s" data-draw="cash" data-source="odoo_cash"></div><p class="dd-src"><b>Source:</b> Odoo (bank balance, payables, receivables, platform settlements). Dashed line: €250k minimum.</p></div>
+<div class="dd-card" id="roi-card"><span class="dd-tag" hidden>Chain-wide</span><h3>Is the investment paying back? Programme net result, cumulative (€k)</h3><div class="dd-fig" data-draw="roi" data-source="odoo_roi"></div><p class="dd-src"><b>Source:</b> Odoo project account (investment and running costs) and measured benefits: commissions saved, lower food cost and extra margin from repeat guests. Benefits ramp up after each phase, so payback comes later than at full speed.</p></div>
 </div>
 </section>
 
 <!-- SYSTEMS, DATA & AI -->
 <section class="dd-tab" id="systems" hidden>
-<div class="dd-intro"><h2>Systems, data &amp; AI · Q13 Can we trust the data? Q14 Are customer and payment data safe?</h2>
+<div class="dd-intro"><h2>Systems, data &amp; AI · Can we trust the data? Are customer and payment data safe?</h2>
 <p class="dd-muted"><b data-draw="rest-name">—</b> · December values. These indicators tell management how much to rely on the rest of the dashboard.</p></div>
 <div class="dd-grid k">
 <div class="dd-card dd-kpi" id="s-ident"><div class="dd-kh"><span class="dd-lbl">Tickets with an identified customer</span><span class="dd-per">December</span></div><span class="dd-val" data-draw="val" data-source="v_lastapp" data-field="identified_tickets_pct" data-where="month=Dec" data-fmt="pct">—</span><span data-draw="st" data-tl="Target ≥ 50%" data-s="v_lastapp" data-f="identified_tickets_pct" data-w="month=Dec" data-target="50" data-good="high" data-tol="5"></span></div>
